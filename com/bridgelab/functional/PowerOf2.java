@@ -18,11 +18,7 @@ public class PowerOf2 {
 	public void tableOfPowerOf2() {
 		get();
 		if(number<31) {
-			for(int i=1; i<=number; i++) {
-				int temp = 1;
-				for(int j=1; j<i; j++) temp = temp*2;
-				System.out.println(i+" is power of 2 : "+temp);
-			}
+			for(int i=1; i<=number; i++) System.out.println(i+" is power of 2 : "+(int)Math.pow(2, i));
 		}else {
 			System.out.println("You have enter greater number than 31..");
 		}

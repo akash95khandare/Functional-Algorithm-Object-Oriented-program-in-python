@@ -1,7 +1,5 @@
 package com.bridgelab.functional;
 
-import java.io.OutputStreamWriter;
-
 public class MainClass {
 	
 	public static void main(String[] args)throws Exception {
@@ -14,10 +12,14 @@ public class MainClass {
 //		System.out.println("Harmonic value is :"+h.getFloatValue(20));
 //		PrimeFactor pf = new PrimeFactor();
 //		pf.printPrimeFactor(33);
-		OutputStreamWriter osw = new OutputStreamWriter(System.out);
-		osw.write("Print Array..");
-		Array2D arr = new Array2D();
-		arr.getArray();
-		arr.printArray();
+//		Array2D arr = new Array2D();
+//		arr.getArray();
+//		arr.printArray();
+//		Distance d = new Distance();
+//		d.euclideanDistance();
+		Stopwatch sw = new Stopwatch();
+		sw.start();
+		Thread.sleep(5000);
+		System.out.println(sw.stop);
 	}
 }

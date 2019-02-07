@@ -1,6 +1,6 @@
 package com.bridgelab.functional;
 
-import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class Array2D {
@@ -23,15 +23,17 @@ public class Array2D {
 	}
 	
 	public void printArray() {
-		OutputStreamWriter osw = new OutputStreamWriter(System.out);
+		PrintWriter writer = new PrintWriter(System.out);
 		for(int i=0; i<r; i++) {
 			for(int j=0; j<c; j++) {
 				try {
-					osw.write(arr[i][j]);
+					writer.print(arr[i][j]);
+					writer.flush();
 				} catch(Exception e) {}
 					System.out.print(" ");
 			}
 			System.out.println();
 		}
+        writer.close();
 	}
 }
