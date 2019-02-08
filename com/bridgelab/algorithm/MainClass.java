@@ -11,6 +11,8 @@ public class MainClass {
 //		a.checkAnagram();
 //		Prime p = new Prime(scan);
 //		p.getPrime();
+		WordList w = new WordList();
+		w.getWord("and");
 	}
 
 }
