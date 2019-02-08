@@ -1,18 +1,15 @@
 package com.bridgelab.functional;
 
-import java.time.LocalTime;
-import java.time.Period;
 
 public class Stopwatch {
 	
-	LocalTime start,stop;
-	public LocalTime start() {
-		start = LocalTime.now();
-		Period p = getPeriod()
+	Long start,stop;
+	public void start() {
+		start = System.currentTimeMillis();
 	}
 	
-	public LocalTime stop() {
-		stop = LocalTime.now();
-		return (start-stop);
+	public Long elapseTime() {
+		stop = System.currentTimeMillis();
+		return ((stop-start)/1000);
 	}
 }
