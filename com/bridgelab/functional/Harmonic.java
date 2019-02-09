@@ -1,14 +1,14 @@
 package com.bridgelab.functional;
 
+import com.bridgelab.utility.Utility;
+
 public class Harmonic {
 
-	public int getIntValue(int n) {
-		int value=0;
-		for(int i=1; i<=n; i++) {
-			value = value + (1/i);
-		}
-		return value;
+	public static void main(String args[]) {
+		
+		Utility u = new Utility();
+		int n = u.getInt("Enter a number which you want to calculate harmonic value.");
+		System.out.println("Harmonic value is : "+u.getHarmonicValue(n));
 	}
-	
 	
 }

@@ -30,6 +30,28 @@ public class Utility {
 	}
 	
 	/**
+	 * Read int value from user and return
+	 */
+	public int getInt(String str) {
+		System.out.println(str);
+		return scan.nextInt();
+	}
+	
+	/**
+	 * Read int value from user and return
+	 */
+	public double getDouble() {
+		return scan.nextDouble();
+	}
+	
+	/**
+	 * Read int value from user and return
+	 */
+	public double getDouble(String str) {
+		return scan.nextDouble();
+	}
+	
+	/**
 	 * Read float value from user and return
 	 */
 	public float getFloat() {
@@ -40,6 +62,14 @@ public class Utility {
 	 * Read string value from user and return
 	 */
 	public String getNext() {
+		return scan.next();
+	}
+	
+	/**
+	 * Read string value from user and return
+	 */
+	public String getNext(String str) {
+		System.out.println(str);
 		return scan.next();
 	}
 	
@@ -67,7 +97,7 @@ public class Utility {
 	 * check year is leap year or not and then return boolean value
 	 * @param Getting year as int type 
 	 */
-	public static boolean checkLeap(int year) {
+	public static boolean isLeapYear(int year) {
 		if(year%100==0) {
 			if(year%400==0) {
 				return true;
@@ -91,6 +121,18 @@ public class Utility {
 		}else {
 			System.out.println("You have enter greater number than 31..");
 		}
+	}
+	
+	/**
+	 * Return the harmonic value as int
+	 * @param Getting number n as int type
+	 */
+	public int getHarmonicValue(int n) {
+		int value=0;
+		for(int i=1; i<=n; i++) {
+			value = value + (1/i);
+		}
+		return value;
 	}
 	
 	/**
@@ -121,12 +163,8 @@ public class Utility {
 	/**
 	 * Getting value from user and return two D array 
 	 */
-	public int[][] getTwoDArray() {
+	public int[][] getTwoDArray(int r, int c) {
 		int arr[][];
-		int r, c;
-		System.out.println("Enter row and coloumn : ");
-		r = scan.nextInt();
-		c = scan.nextInt();
 		arr = new int[r][c];
 		System.out.println("Enter array element : ");
 		for(int i=0; i<r; i++) {
@@ -292,43 +330,15 @@ public class Utility {
 	}
 	
 	/**
-	 * @param it will get temperatur and wind speed value as double
+	 * @param it will get temperature and wind speed value as double
 	 * Return weather value
 	 */
-	public double weather(double t,double v) {
+	public double weather(int t,int v) {
 		double w;
 		if(t<50 && v>3 && v<120) {
 				w = (35.74 + 0.6215*t + (0.4275*t -35.75)*Math.pow(v, 0.16));
 				return w;
 		}else return -1;		
-	}
-	
-	/**
-	 * @param it will get two string 
-	 * check it is anagram or not then return boolean value
-	 */
-	public boolean isAnagram(String first, String second) {	
-		boolean bool[];
-		int counter = 0;
-		if(first.length() == second.length()) {
-			bool = new boolean[second.length()];
-			for(int j=0; j<second.length(); j++) bool[j] = false;
-			for(int i=0; i<first.length(); i++) {
-				for(int j=0; j<second.length(); j++) {
-					if(first.charAt(i)==second.charAt(j) && bool[j]==false) {
-						bool[j]=true;
-						counter++;
-					}
-				}
-			}
-			if(counter==second.length()) {
-				return true;
-			} else {
-				return false;
-			}
-		}else {
-			return false;
-		}
 	}
 	
 	/**
@@ -377,6 +387,34 @@ public class Utility {
 	/**
 	 * Algorithm 
 	 */
+	
+	/**
+	 * @param it will get two string 
+	 * check it is anagram or not then return boolean value
+	 */
+	public boolean isAnagram(String first, String second) {	
+		boolean bool[];
+		int counter = 0;
+		if(first.length() == second.length()) {
+			bool = new boolean[second.length()];
+			for(int j=0; j<second.length(); j++) bool[j] = false;
+			for(int i=0; i<first.length(); i++) {
+				for(int j=0; j<second.length(); j++) {
+					if(first.charAt(i)==second.charAt(j) && bool[j]==false) {
+						bool[j]=true;
+						counter++;
+					}
+				}
+			}
+			if(counter==second.length()) {
+				return true;
+			} else {
+				return false;
+			}
+		}else {
+			return false;
+		}
+	}
 	
 	/**
 	 * @param It will get String array, start index and end index
@@ -543,5 +581,16 @@ public class Utility {
 	 */
 	public static void displayStringArr(String[] arr) {
 		for(int i=0; i<arr.length; i++) System.out.print(arr[i]+" ");
+	}
+	
+	public double euclideanDistance(int x, int y) {
+		return (Math.sqrt(Math.pow(x,x)+Math.pow(y, y)));
+	}
+	
+	public static float flipCoin(int n) {
+		Random rand = new Random();
+		float flip = rand.nextFloat();;
+		if(n>0) flipCoin(n-1);	
+		return flip;
 	}
 }

@@ -5,6 +5,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileReader;
 
+import com.bridgelab.utility.Utility;
+
 
 public class WordList {
 
@@ -46,9 +48,8 @@ public class WordList {
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
-		UtilityClass u = new UtilityClass();
 		word = insertionSortStr(word, 0, word.length-1);
-		u.displayStringArr(word);
+		Utility.displayStringArr(word);
 		System.out.println();
 		if(binarySearchStr(word, 0, word.length-1, key)!=-1) System.out.println("\nWord found..");
 		else System.out.println("\nWord did not found..");
