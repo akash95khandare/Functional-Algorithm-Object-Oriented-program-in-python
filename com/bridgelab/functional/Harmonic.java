@@ -10,11 +10,5 @@ public class Harmonic {
 		return value;
 	}
 	
-	public float getFloatValue(int n) {
-		float value=0;
-		for(int i=1; i<=n; i++) {
-			value = value + (1/i);
-		}
-		return value;
-	}
+	
 }
