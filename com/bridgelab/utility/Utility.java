@@ -593,4 +593,25 @@ public class Utility {
 		if(n>0) flipCoin(n-1);	
 		return flip;
 	}
+	
+	public static int[] couponGenerator(int number) {
+		int[] coupon = new int[number];
+		int i=1,j=0;
+		boolean check = true;
+		Random r = new Random();
+		int randCoupon = r.nextInt(100);
+		coupon[0] = randCoupon;
+		while(i<number) {
+			while(j<i) {
+				if(coupon[j]==randCoupon) {
+					randCoupon = r.nextInt(100);
+					j=0;
+				}
+				j++;
+			}
+				coupon[i] = randCoupon;
+				i++;
+		}
+		return coupon;
+	}
 }
