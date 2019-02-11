@@ -44,7 +44,7 @@ public class WordList {
 			while(br.readLine()!=null) {
 				str = str+br.readLine();
 			}
-			word = str.split(" ");
+			word = str.split(",");
 		} catch(Exception e) {
 			e.printStackTrace();
 		}

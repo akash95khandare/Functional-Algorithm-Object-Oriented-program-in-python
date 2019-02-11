@@ -10,8 +10,11 @@
 package com.bridgelab.utility;
 
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
+
+import com.bridgelab.functional.Gambler;
 
 public class Utility {
 
@@ -124,18 +127,6 @@ public class Utility {
 	}
 	
 	/**
-	 * Return the harmonic value as int
-	 * @param Getting number n as int type
-	 */
-	public int getHarmonicValue(int n) {
-		int value=0;
-		for(int i=1; i<=n; i++) {
-			value = value + (1/i);
-		}
-		return value;
-	}
-	
-	/**
 	 * Return the harmonic value as float
 	 * @param Getting number n as int type
 	 */
@@ -197,16 +188,16 @@ public class Utility {
 	/**
 	 * Getting current time and return it
 	 */
-	public Long startWatch() {
-		return System.currentTimeMillis();
+	public long startWatch() {
+		return System.nanoTime();
 	}
 	
 	/**
 	 * Return elapse time 
 	 */
-	public Long elapseTime(Long start) {
-		Long stop = System.currentTimeMillis();
-		return ((stop-start)/1000);
+	public long elapseTime(long start) {
+		long stop = System.nanoTime();
+		return ((stop-start));
 	}
 	
 	/**
@@ -341,52 +332,122 @@ public class Utility {
 		}else return -1;		
 	}
 	
-	/**
-	 * @param it will get number b as int type
-	 * check it is prime or not and then return boolean value
-	 */
-	public boolean isPrime(int n) {
-		for(int i=2; i<n; i++) {
-			if(n%i==0) return false;
-		}
-		return true;
+	
+	
+	public double euclideanDistance(int x, int y) {
+		return (Math.sqrt(Math.pow(x,x)+Math.pow(y, y)));
 	}
 	
-	/**
-	 * @param It will get number range as int type
-	 * return the array of prime number between 2 to range
-	 */
-	public int[] getPrimeNumberInRange(int range) {
-		int arr[] = new int[range/3];
-		int j=0;
-		for(int i=2; i<=range; i++) {
-			if(isPrime(i)) arr[j] = i; j++;
-		}
-		return arr;
+	public static float flipCoin(int n) {
+		Random rand = new Random();
+		float flip = rand.nextFloat();;
+		if(n>0) flipCoin(n-1);	
+		return flip;
 	}
 	
-	/**
-	 * @param It will get number n as int type
-	 * Check it is palindrome or not and then return boolean value
-	 */
-	public static boolean isPalendrome(int n) {
-		int revNo=0;
-		int temp1, temp2=n; 
-		while(true) {
-			temp1 = temp2%10;
-			temp2 = temp2/10;
-			revNo = (revNo*10)+temp1;
-			if(temp2==0) {
-				break;
+	public static int[] couponGenerator(int number) {
+		int[] coupon = new int[number];
+		int i=1,j=0;
+		boolean check = true;
+		Random r = new Random();
+		int randCoupon = r.nextInt(100);
+		coupon[0] = randCoupon;
+		while(i<number) {
+			while(j<i) {
+				if(coupon[j]==randCoupon) {
+					randCoupon = r.nextInt(100);
+					j=0;
+				}
+				j++;
+			}
+				coupon[i] = randCoupon;
+				i++;
+		}
+		return coupon;
+	}
+	
+	public static void gambler(int goal) {
+		int doller = 1;
+		int win=0;
+		int tMatch=0;
+		Utility u = new Utility();
+		Random rand = new Random();
+		while(doller!=0) {
+			System.out.println("Guess number :");
+			int n = u.getInt();
+			tMatch++;
+			if(rand.nextInt(3)==n) {
+				doller++;
+				win++;
+			} else doller--;
+			if(doller==goal) { System.out.println("You reached goal"); break; }
+		}
+		if(doller==0) System.out.println("You loss your doller");
+		System.out.println(tMatch);
+		int temp = (win*100)/tMatch;
+		System.out.println("Persentage of win : "+temp);
+		System.out.println("Persentage of loss : "+(100-temp));
+	}
+	
+	public static void sumOfThree(int[] arr) {
+		int counter=0;
+		for(int i=0; i<arr.length; i++) {
+			for(int j=1+i; j<arr.length; j++) {
+				for(int k=j+1; k<arr.length; k++) {
+					if(arr[i]+arr[j]+arr[k]==0) {
+						System.out.println(arr[i]+" + "+arr[j]+" + "+arr[k]+" = 0");
+						counter++;
+					}
+				}
 			}
 		}
-		if(n==revNo) return true;
-		else return false;
+		System.out.println("Total no of triplets are "+counter);
 	}
 	
-	/**
+	private static String swap(String str, int i, int j) {
+		char temp;
+		char ch[] = str.toCharArray();
+		temp = ch[i];
+		ch[i] = ch[j];
+		ch[j] = temp;
+		return String.valueOf(ch);
+	}
+	public static void permutation(String str, int l, int r) {
+		if (l == r) 
+            System.out.println(str); 
+        else{ 
+            for(int i=l; i<=r; i++) { 
+                str = swap(str,l,i); 
+                permutation(str, l+1, r); 
+                str = swap(str,l,i); 
+            } 
+        } 
+	}
+	
+//	private static int swap(int number, int i, int j) {
+//		int temp;
+//		char ch[] = str.toCharArray();
+//		temp = ch[i];
+//		ch[i] = ch[j];
+//		ch[j] = temp;
+//		return String.valueOf(ch);
+//	}
+//	
+//	public static void permutation(int number, int l, int r) {
+//		if (l == r) 
+//            System.out.println(number); 
+//        else{ 
+//            for(int i=l; i<=r; i++) { 
+//                number = swap(number,l,i); 
+//                permutation(number, l+1, r); 
+//                number = swap(number,l,i); 
+//            } 
+//        } 
+//	}
+	
+	/*******************************************************************
 	 * Algorithm 
-	 */
+	 *******************************************************************/
 	
 	/**
 	 * @param it will get two string 
@@ -402,7 +463,9 @@ public class Utility {
 				for(int j=0; j<second.length(); j++) {
 					if(first.charAt(i)==second.charAt(j) && bool[j]==false) {
 						bool[j]=true;
+//						System.out.println(first.charAt(i)+" "+second.charAt(j)+" "+counter);
 						counter++;
+						break;
 					}
 				}
 			}
@@ -413,6 +476,59 @@ public class Utility {
 			}
 		}else {
 			return false;
+		}
+	}
+	
+	/**
+	 * @param it will get number b as int type
+	 * check it is prime or not and then return boolean value
+	 */
+	public boolean isPrime(int n) {
+		for(int i=2; i<n; i++) {
+			if(n%i==0) return false;
+		}
+		return true;
+	}
+	
+	/**
+	 * @param It will get number range as int type
+	 * return the array of prime number between 2 to range
+	 */
+	public ArrayList getPrimeNumberInRange(int range) {
+		ArrayList arr = new ArrayList<Integer>();
+		int j=0;
+		for(int i=2; i<=range; i++) {
+			if(isPrime(i)) {arr.add(i); j++;}
+		}
+		return arr;
+	}
+	
+	/**
+	 * @param It will get number n as int type
+	 * Check it is palindrome or not and then return boolean value
+	 */
+	
+	public static boolean isPalindrome(int n) {
+		int revNo=0;
+		int temp1, temp2=n; 
+		while(true) {
+			temp1 = temp2%10;
+			temp2 = temp2/10;
+			revNo = (revNo*10)+temp1;
+			if(temp2==0) {
+				break;
+			}
+		}
+		if(n==revNo) return true;
+		else return false;
+	}	
+	
+	public void isPrimeAnagram(ArrayList arr) {
+		Utility u = new Utility();
+		for(int i=0; i<arr.size(); i++) {
+			for(int j=i+1; j<arr.size(); j++) {
+				if(u.isAnagram(String.valueOf((int)arr.get(i)), String.valueOf((int)arr.get(j)))) System.out.print("["+arr.get(i)+" and "+arr.get(j)+"] ");
+			}
 		}
 	}
 	
@@ -488,6 +604,7 @@ public class Utility {
 		return -1;
 	}
 	
+	
 	/**
 	 * @param It will get String array, start index, end index and key
 	 * Give index of key value of which will find in array
@@ -498,7 +615,10 @@ public class Utility {
 			mid = (start+end)/2;
 			if(arr[mid].hashCode()<key.hashCode()) start = mid + 1;
 			else if(arr[mid].hashCode()>key.hashCode()) end = mid -1;
-			else if(arr[mid]==key) return mid;
+			else if(arr[mid]==key) {
+				System.out.println("Value is found");
+				return mid;
+			}
 		}
 		return -1;
 	}
@@ -583,35 +703,28 @@ public class Utility {
 		for(int i=0; i<arr.length; i++) System.out.print(arr[i]+" ");
 	}
 	
-	public double euclideanDistance(int x, int y) {
-		return (Math.sqrt(Math.pow(x,x)+Math.pow(y, y)));
-	}
-	
-	public static float flipCoin(int n) {
-		Random rand = new Random();
-		float flip = rand.nextFloat();;
-		if(n>0) flipCoin(n-1);	
-		return flip;
-	}
-	
-	public static int[] couponGenerator(int number) {
-		int[] coupon = new int[number];
-		int i=1,j=0;
-		boolean check = true;
-		Random r = new Random();
-		int randCoupon = r.nextInt(100);
-		coupon[0] = randCoupon;
-		while(i<number) {
-			while(j<i) {
-				if(coupon[j]==randCoupon) {
-					randCoupon = r.nextInt(100);
-					j=0;
-				}
-				j++;
+	public static void vendingMachine(int change) {
+		int arr[] = new int[] {1,2,5,10,50,100,500,1000};
+		int la = arr.length-1;
+		while(change!=0) {
+			if(arr[la]<=change) {
+				System.out.print(arr[la]+" ");
+				change = change-arr[la];
+				vendingMachine(change);
+				break;
 			}
-				coupon[i] = randCoupon;
-				i++;
+			la--;
 		}
-		return coupon;
 	}
+	
+	public double CelsiusToFahrenheit(int Celsius) {
+		double Fahrenheit = (Celsius * 9/5) + 32;
+		return Fahrenheit;
+	}
+	
+	public double FahrenheitToCelsius(int Fahrenheit) {
+		double Celsius = (Fahrenheit - 32) * 5/9;
+		return Celsius;
+	}
+	
 }

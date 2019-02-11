@@ -1,14 +1,14 @@
-package com.bridgelab.functional;
-
-import java.util.Random;
+package com.bridgelab.algorithm;
 
 import com.bridgelab.utility.Utility;
 
-public class Gambler {
+public class VendingMachine {
 
+	
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Utility.gambler(10);
+		Utility.vendingMachine(1500);
 	}
 
 }

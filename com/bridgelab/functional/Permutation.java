@@ -1,13 +1,12 @@
 package com.bridgelab.functional;
 
-public class CoupanGenerator {
+import com.bridgelab.utility.Utility;
 
-	public static void couponGenerate(int number) {
-		int coupon
-	}
+public class Permutation {
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		Utility.permutation("aba", 0, 2);
 	}
 
 }
