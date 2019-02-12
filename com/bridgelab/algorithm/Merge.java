@@ -8,7 +8,7 @@ public class Merge {
 		
 		long start;
 		String str[] = {"K","H","U","E","Ahetesham","Akash","Rohan","A"};
-		int arr[] = new int[] {9,4,5,65,48,6,74,78,96,52,636};
+		int arr[] = new int[] {9,4,5,65,48,6,74,78,96,52,636,988};
 //		Utility.displayStringArr(str);
 		Utility u =new Utility();
 		
@@ -30,7 +30,7 @@ public class Merge {
 
 		start = u.startWatch();
 		System.out.println("Binary search");
-		Utility.binarySearchStr(str, 0, str.length-1, "Ahetesham");
+		Utility.binarySearchStr(str, 0, str.length, "Ahetesham");
 		System.out.println("\nTime :"+u.elapseTime(start));
 
 		start = u.startWatch();
@@ -43,5 +43,6 @@ public class Merge {
 		Utility.displayIntArr(Utility.insertionSortInt(arr, 0, arr.length-1));
 		System.out.println("\nTime :"+u.elapseTime(start));
 
+		System.out.println(Utility.binarySearchInt(arr, 0, arr.length, 74));
 	}
 }

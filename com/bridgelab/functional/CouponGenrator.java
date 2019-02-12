@@ -8,7 +8,7 @@ public class CouponGenrator {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Utility.displayIntArr(Utility.couponGenerator(5));
+		Utility.displayIntArr(Utility.couponGenerator(10));
 	}
 
 }

@@ -27,11 +27,11 @@ public class WordList {
 
 	public int binarySearchStr(String[] arr,int start, int end, String key) {
 		int mid;
-		while(start<end) {
-			mid = (start+end)/2;
+		while(start<=end) {
+			mid = start+(end-start)/2;
+			if(arr[mid]==key) return mid;
 			if(Math.abs(arr[mid].hashCode())<Math.abs(key.hashCode())) start = mid + 1;
-			else if(Math.abs(arr[mid].hashCode())>Math.abs(key.hashCode())) end = mid -1;
-			else if(arr[mid].hashCode()==key.hashCode()) return mid;
+			else end = mid-1;
 		}
 		return -1;
 	}
@@ -44,14 +44,24 @@ public class WordList {
 			while(br.readLine()!=null) {
 				str = str+br.readLine();
 			}
-			word = str.split(",");
+			word = str.split(" ");
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
 		word = insertionSortStr(word, 0, word.length-1);
 		Utility.displayStringArr(word);
 		System.out.println();
-		if(binarySearchStr(word, 0, word.length-1, key)!=-1) System.out.println("\nWord found..");
-		else System.out.println("\nWord did not found..");
+		System.out.println(Utility.binarySearchStr(word, 0, word.length-1, key));
+		if(binarySearchStr(word, 0, word.length-1, key)!=-1) {
+			System.out.println("\nWord found..");
+		}
+		else {
+			System.out.println("\nWord did not found..");
+		}
+	}
+	
+	public static void main(String args[]) {
+		WordList w = new WordList();
+		w.getWord("action");
 	}
 }

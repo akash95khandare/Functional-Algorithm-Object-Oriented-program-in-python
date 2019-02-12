@@ -598,7 +598,7 @@ public class Utility {
 		while(start<end) {
 			mid = (start+end)/2;
 			if(arr[mid]<key) start = mid + 1;
-			else if(arr[mid]>key) end = mid -1;
+			else if(arr[mid]>key) end = mid;
 			else if(arr[mid]==key) return mid;
 		}
 		return -1;
@@ -611,14 +611,14 @@ public class Utility {
 	 */
 	public static int binarySearchStr(String[] arr,int start, int end, String key) {
 		int mid;
-		while(start<end) {
-			mid = (start+end)/2;
-			if(arr[mid].hashCode()<key.hashCode()) start = mid + 1;
-			else if(arr[mid].hashCode()>key.hashCode()) end = mid -1;
-			else if(arr[mid]==key) {
+		while(start<=end) {
+			mid = start+(end-start)/2;
+			if(arr[mid]==key) {
 				System.out.println("Value is found");
 				return mid;
 			}
+			if(arr[mid].hashCode()<key.hashCode()) start = mid + 1;
+			else end = mid-1;
 		}
 		return -1;
 	}
@@ -725,6 +725,52 @@ public class Utility {
 	public double FahrenheitToCelsius(int Fahrenheit) {
 		double Celsius = (Fahrenheit - 32) * 5/9;
 		return Celsius;
+	}
+	
+	public static int arrToInt(int[] arr) {
+		int i = 0;
+		int binaryNo=0;
+		while(i<arr.length) {
+			binaryNo = (binaryNo*10)+arr[i];
+			i++;
+		}
+		return binaryNo;
+	}
+	
+	public static int[] toBinary(int n) {
+		int arr[] = new int[8];
+		int i=arr.length-1;
+		while(i>=0) {
+				int temp1 = n%2;
+				n = n/2;
+				arr[i] = temp1;
+				i--;
+		}
+		return arr;
+	}
+	
+	public static int toDecimal(int[] binary) {
+		int decimal=0;
+		int j=7;
+		for(int i=0; i<binary.length; i++) {
+			if(binary[i]==1) {
+				decimal=decimal+(int)Math.pow(2,j);
+			}
+			j--;
+		}
+		return decimal;
+	}
+	
+	public static int nibbleSwap(int[] arr) {
+		int i=0,j=4;
+		while(i<4) {
+			int temp = arr[i];
+			arr[i]=arr[j];
+			arr[j]=temp;
+			i++;
+			j++;
+		}
+		return toDecimal(arr);
 	}
 	
 }

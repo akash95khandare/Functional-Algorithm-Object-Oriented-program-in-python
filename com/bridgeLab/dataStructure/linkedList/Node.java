@@ -2,6 +2,6 @@ package com.bridgeLab.dataStructure.linkedList;
 
 public class Node {
 
-	int data;
+	String data;
 	Node next;
 }
