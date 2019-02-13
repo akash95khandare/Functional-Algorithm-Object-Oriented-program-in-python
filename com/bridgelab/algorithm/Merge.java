@@ -16,32 +16,32 @@ public class Merge {
 		System.out.println("Merge sort");
 		Utility.mergeSort(str, 0, str.length-1);
 		Utility.displayStringArr(str);
-		System.out.println("\nTime :"+u.elapseTime(start));
+		System.out.println("\nElapse Time :"+u.elapseTime(start));
 		
 		start = u.startWatch();
 		System.out.println("Bubble sort ");
 		Utility.displayStringArr(Utility.bubbleSortStr(str, 0, str.length-1));
-		System.out.println("\nTime :"+u.elapseTime(start));
+		System.out.println("\nElapse Time :"+u.elapseTime(start));
 		
 		start = u.startWatch();
 		System.out.println("Insertion sort");
 		Utility.displayStringArr(Utility.insertionSortStr(str, 0, str.length-1));
-		System.out.println("\nTime :"+u.elapseTime(start));
+		System.out.println("\nElapse Time :"+u.elapseTime(start));
 
 		start = u.startWatch();
 		System.out.println("Binary search");
 		Utility.binarySearchStr(str, 0, str.length, "Ahetesham");
-		System.out.println("\nTime :"+u.elapseTime(start));
+		System.out.println("\nElapse Time :"+u.elapseTime(start));
 
 		start = u.startWatch();
 		System.out.println("Bubble sort ");
 		Utility.displayIntArr(Utility.bubbleSortInt(arr, 0, arr.length-1));
-		System.out.println("\nTime :"+u.elapseTime(start));
+		System.out.println("\nElapse Time :"+u.elapseTime(start));
 
 		start = u.startWatch();
 		System.out.println("Insertion sort");
 		Utility.displayIntArr(Utility.insertionSortInt(arr, 0, arr.length-1));
-		System.out.println("\nTime :"+u.elapseTime(start));
+		System.out.println("\nElapse Time :"+u.elapseTime(start));
 
 		System.out.println(Utility.binarySearchInt(arr, 0, arr.length, 74));
 	}
