@@ -15,18 +15,17 @@ public class UnOrderedList {
 		String str;
 		try{
 			br = new BufferedReader(new FileReader("abc.txt"));
-			str="";
+			str=br.readLine();
 			String temp;
 			while((temp=br.readLine())!=null) {
-				str = temp+" ";
+				str = str+" "+temp;
 			}
 			br.close();
-			System.out.println(str);
 			return str;
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
-		return "";
+		return "None";
 	}
 	
 	public void writeToFile(LinkedList list) {
@@ -34,8 +33,11 @@ public class UnOrderedList {
 		try{
 			bw = new BufferedWriter(new FileWriter("abc.txt"));
 			int i=0;
-			while(i<list.size()) {
-				bw.write(list.pollFirst());
+			int n = list.size();
+			System.out.println(list.size());
+			while(i<n) {
+				System.out.print(list.pollFirst().hashCode()+" ");
+//				bw.write(list.pollFirst()+" ");
 				i++;
 			}
 			bw.flush();
@@ -50,10 +52,10 @@ public class UnOrderedList {
 		Utility u = new Utility();
 		LinkedList list = new LinkedList();
 		for(int i=0; i<str.length; i++) {
-			list.add(str[i]);
+			list.sort(str[i]);
 		}
 		list.display();
-		String st = u.getNext("Enter word");
+		String st = u.getNext("\nEnter word");
 		if(list.search(st)) {
 			list.remove(st);
 		}else list.add(st);

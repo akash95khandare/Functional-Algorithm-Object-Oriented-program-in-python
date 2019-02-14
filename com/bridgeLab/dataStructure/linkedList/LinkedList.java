@@ -23,7 +23,7 @@ public class LinkedList {
 		Node tempNode = head;
 		Node previousNode = tempNode;
 		 do{
-			if(tempNode.data!=item) {
+			if(tempNode.data.hashCode()!=item.hashCode()) {
 				previousNode = tempNode;
 				tempNode = tempNode.next;
 			}else {
@@ -36,7 +36,7 @@ public class LinkedList {
 	public boolean search(String item) {
 		Node tempNode = head;
 		while(tempNode!=null){
-				if(tempNode.data==item) return true;
+				if(tempNode.data.hashCode()==item.hashCode()) return true;
 				tempNode = tempNode.next;
 			}
 		 return false;
@@ -71,5 +71,46 @@ public class LinkedList {
 			System.out.print(tempNode.data+" ");
 			tempNode = tempNode.next;
 		}
+	}
+
+	public void addAfter(int pos) {
+		for(int i=1; i<=pos; i++) {
+			
+		}
+	}
+	
+	public void sort(String item) {
+		Node newNode = new Node();
+		newNode.data = item;
+		newNode.next = null;
+		if(head==null) {
+			head = newNode;
+		}else {
+			System.out.println("1");
+			Node tempNode = head;
+			Node previousNode;
+			 while(true) {
+				System.out.println("2");
+				if(Math.abs(head.data.hashCode())>Math.abs(item.hashCode())) {
+					System.out.println("3");
+					newNode.next=tempNode;
+					head = newNode;
+					break;
+				}
+				else if(Math.abs(tempNode.data.hashCode())>Math.abs(item.hashCode())) {
+					newNode.next=tempNode;
+					previousNode=tempNode;
+					previousNode.next=newNode;
+					tempNode = tempNode.next;
+					break;
+				}else {
+					previousNode=tempNode;
+					tempNode = tempNode.next;
+				}
+			}
+			 tempNode.next=newNode;
+//			previousNode.next=newNode;
+		}
+		
 	}
 }

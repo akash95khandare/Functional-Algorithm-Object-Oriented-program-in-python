@@ -61,6 +61,10 @@ public class Utility {
 		return scan.nextFloat();
 	}
 	
+	public float getFloat(String str) {
+		System.out.println(str);
+		return scan.nextFloat();
+	}
 	/**
 	 * Read string value from user and return
 	 */
@@ -595,11 +599,11 @@ public class Utility {
 	 */
 	public static int binarySearchInt(int[] arr,int start, int end, int key) {
 		int mid;
-		while(start<end) {
+		while(start<=end) {
 			mid = (start+end)/2;
-			if(arr[mid]<key) start = mid + 1;
-			else if(arr[mid]>key) end = mid;
-			else if(arr[mid]==key) return mid;
+			if(arr[mid]==key) return mid;
+			else if(arr[mid]>key) end = mid-1;
+			else if(arr[mid]<key) start = mid + 1;
 		}
 		return -1;
 	}
@@ -612,7 +616,7 @@ public class Utility {
 	public static int binarySearchStr(String[] arr,int start, int end, String key) {
 		int mid;
 		while(start<=end) {
-			mid = start+(end-start)/2;
+			mid = (start+end)/2;
 			if(arr[mid]==key) {
 				System.out.println("Value is found");
 				return mid;
