@@ -1,10 +1,9 @@
 package com.bridgeLab.dataStructure.linkedList;
 
-
-public class LinkedList {
+public class LinkedListInt {
 
 	Node head;
-	public void add(String item) {
+	public void add(int item) {
 		Node newNode = new Node();
 		newNode.data = item;
 		newNode.next = null;
@@ -19,11 +18,11 @@ public class LinkedList {
 		}
 	}
 	
-	public void remove(String item) {
+	public void remove(int item) {
 		Node tempNode = head;
 		Node previousNode = tempNode;
 		 do{
-			if(tempNode.data.hashCode()!=item.hashCode()) {
+			if(tempNode.data!=item) {
 				previousNode = tempNode;
 				tempNode = tempNode.next;
 			}else {
@@ -33,17 +32,17 @@ public class LinkedList {
 		}while(tempNode.next!=null);
 	}	
 
-	public boolean search(String item) {
+	public boolean search(int item) {
 		Node tempNode = head;
 		while(tempNode!=null){
-				if(tempNode.data.hashCode()==item.hashCode()) return true;
+				if(tempNode.data==item) return true;
 				tempNode = tempNode.next;
 			}
 		 return false;
 	}
 
-	public String pollFirst() {
-		String str = head.data;
+	public int pollFirst() {
+		int str = head.data;
 		head = head.next;
 		return str;
 	}
@@ -78,7 +77,7 @@ public class LinkedList {
 		previousNode.next=newNode;
 	}
 	
-	public void sort(String item) {
+	public void sort(int item) {
 		Node newNode = new Node();
 		newNode.data = item;
 		newNode.next = null;
@@ -87,20 +86,22 @@ public class LinkedList {
 		}else {
 			Node tempNode = head;
 			Node previousNode=head;
-			 while(true) {
-				if(Math.abs(head.data.hashCode())>Math.abs(item.hashCode())) {
-					newNode.next = tempNode;
-					head = newNode;
+			if(head.data>item) {
+				newNode.next = tempNode;
+				head = newNode;
+			}
+			else {
+				while(true) {
+					if(tempNode.data>item) {
+						addAfter(previousNode, newNode);
+						break;
+					}
+					if(tempNode.next==null) {
+						break;
+					}
+					previousNode = tempNode;
+					tempNode = tempNode.next;
 				}
-				else if(Math.abs(tempNode.data.hashCode())>Math.abs(item.hashCode())) {
-					addAfter(previousNode, newNode);
-					break;
-				}
-				if(tempNode.next==null) {
-					break;
-				}
-				previousNode = tempNode;
-				tempNode = tempNode.next;
 			}
 		}
 		

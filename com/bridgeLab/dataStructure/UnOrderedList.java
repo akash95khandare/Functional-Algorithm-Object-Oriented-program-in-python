@@ -36,8 +36,7 @@ public class UnOrderedList {
 			int n = list.size();
 			System.out.println(list.size());
 			while(i<n) {
-				System.out.print(list.pollFirst().hashCode()+" ");
-//				bw.write(list.pollFirst()+" ");
+				bw.write(list.pollFirst()+" ");
 				i++;
 			}
 			bw.flush();
@@ -52,7 +51,7 @@ public class UnOrderedList {
 		Utility u = new Utility();
 		LinkedList list = new LinkedList();
 		for(int i=0; i<str.length; i++) {
-			list.sort(str[i]);
+			list.add(str[i]);
 		}
 		list.display();
 		String st = u.getNext("\nEnter word");
