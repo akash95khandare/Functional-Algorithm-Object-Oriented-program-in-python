@@ -1,12 +1,29 @@
-package com.bridgeLab.dataStructure.linkedList;
+package com.bridgeLab.dataStructure.banking;
 
+import com.bridgeLab.dataStructure.banking.Node;
 
-public class LinkedList {
+public class ListBank {
 
 	Node head;
 	public void add(String item) {
 		Node newNode = new Node();
-		newNode.data = item;
+		newNode.name = item;
+		newNode.next = null;
+		
+		if(head==null) head = newNode;
+		else {
+			Node tempNode = head;
+			while(tempNode.next!=null) {
+				tempNode = tempNode.next;
+			}
+			tempNode.next = newNode;
+		}
+	}
+	
+	public void add(String item,double amount) {
+		Node newNode = new Node();
+		newNode.name = item;
+		newNode.amount = amount;
 		newNode.next = null;
 		
 		if(head==null) head = newNode;
@@ -23,10 +40,10 @@ public class LinkedList {
 		Node tempNode = head;
 		Node previousNode = tempNode;
 		 do{
-			 if(head.data.hashCode()==item.hashCode()) {
+			 if(head.name.hashCode()==item.hashCode()) {
 				 head = tempNode.next;
 			 }
-			 else if(tempNode.data.hashCode()!=item.hashCode()) {
+			 else if(tempNode.name.hashCode()!=item.hashCode()) {
 				previousNode = tempNode;
 				tempNode = tempNode.next;
 			}else {
@@ -39,14 +56,29 @@ public class LinkedList {
 	public boolean search(String item) {
 		Node tempNode = head;
 		while(tempNode!=null){
-				if(tempNode.data.hashCode()==item.hashCode()) return true;
+				if(tempNode.name.hashCode()==item.hashCode()) return true;
 				tempNode = tempNode.next;
 			}
 		 return false;
 	}
 
+	public double getAmount(String item) {
+		Node tempNode = head;
+		while(tempNode!=null){
+				if(tempNode.name.hashCode()==item.hashCode()) return tempNode.amount;
+				tempNode = tempNode.next;
+			}
+		 return -1;
+	}
+	
 	public String pollFirst() {
-		String str = head.data;
+		String str = head.name;
+		head = head.next;
+		return str;
+	}
+	
+	public String returnAll() {
+		String str = head.name+" "+head.amount;
 		head = head.next;
 		return str;
 	}
@@ -72,62 +104,17 @@ public class LinkedList {
 	public void display() {
 		Node tempNode = head;
 		while(tempNode!=null){
-			System.out.print(tempNode.data+" ");
+			System.out.print(tempNode.name+" ");
 			tempNode = tempNode.next;
 		}
 	}
 	
-	public void displayHash() {
-		Node tempNode = head;
-		while(tempNode!=null){
-			System.out.print(Math.abs(tempNode.data.hashCode())+" ");
-			tempNode = tempNode.next;
-		}
-	}
-
-	private void addAfter(Node previousNode,Node newNode) {
-		newNode.next=previousNode.next;
-		previousNode.next=newNode;
-	}
-	
-	public void sort(String item) {
-		Node newNode = new Node();
-		newNode.data = item;
-		newNode.next = null;
-		if(head==null) {
-			head = newNode;
-		}else {
-			Node tempNode = head;
-			Node previousNode=head;
-			if(Math.abs(head.data.hashCode())>Math.abs(item.hashCode())) {
-				newNode.next = tempNode;
-				head = newNode;
-			}else {
-				while(true) {
-					if(Math.abs(tempNode.data.hashCode())>Math.abs(item.hashCode())) {
-						addAfter(previousNode, newNode);
-						break;
-					}
-					else if(tempNode.next==null && Math.abs(tempNode.data.hashCode())<Math.abs(item.hashCode())) {
-						tempNode.next=newNode;
-						break;
-					}
-					if(tempNode.next==null) {
-						break;
-					}
-					previousNode = tempNode;
-					tempNode = tempNode.next;
-				}
-			}
-		}
-	}
-
 	public String getLast() {
 		Node tempNode = head;
 		while(tempNode.next!=null) {
 			tempNode = tempNode.next;
 		}
-		return tempNode.data;
+		return tempNode.name;
 	}
 	
 	public void removeLast() {
@@ -142,5 +129,16 @@ public class LinkedList {
 			tempNode = tempNode.next;
 		}
 		previousNode.next=null;
+	}
+
+	public void modifyAmount(String name,double amount) {
+		Node tempNode = head;
+		while(!tempNode.name.equals(name)) {
+			tempNode = tempNode.next;
+			if(tempNode==null) {
+				System.out.println("User not available.");
+			}
+		}
+		tempNode.amount = amount;
 	}
 }

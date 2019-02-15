@@ -51,6 +51,7 @@ public class Utility {
 	 * Read int value from user and return
 	 */
 	public double getDouble(String str) {
+		System.out.println(str);
 		return scan.nextDouble();
 	}
 	

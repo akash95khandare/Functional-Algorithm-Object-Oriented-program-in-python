@@ -22,14 +22,17 @@ public class LinkedListInt {
 		Node tempNode = head;
 		Node previousNode = tempNode;
 		 do{
-			if(tempNode.data!=item) {
+			 if(head.data==item) {
+				 head = tempNode.next;
+			 }
+			 else if(tempNode.data!=item.) {
 				previousNode = tempNode;
 				tempNode = tempNode.next;
 			}else {
 				previousNode.next = tempNode.next;
 				break;
 			}
-		}while(tempNode.next!=null);
+		}while(tempNode!=null);
 	}	
 
 	public boolean search(int item) {
@@ -89,11 +92,14 @@ public class LinkedListInt {
 			if(head.data>item) {
 				newNode.next = tempNode;
 				head = newNode;
-			}
-			else {
+			}else {
 				while(true) {
 					if(tempNode.data>item) {
 						addAfter(previousNode, newNode);
+						break;
+					}
+					else if(tempNode.next==null && tempNode.data<item) {
+						tempNode.next=newNode;
 						break;
 					}
 					if(tempNode.next==null) {
@@ -104,6 +110,5 @@ public class LinkedListInt {
 				}
 			}
 		}
-		
 	}
 }
