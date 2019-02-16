@@ -13,7 +13,7 @@ public class Restore {
 		BufferedReader br;
 		String str;
 		try{
-			br = new BufferedReader(new FileReader("abc.txt"));
+			br = new BufferedReader(new FileReader("bank_user_data.txt"));
 			str=br.readLine();
 			String temp;
 			while((temp=br.readLine())!=null) {
@@ -30,7 +30,7 @@ public class Restore {
 	public void writeToFile(ListBank list) {
 		BufferedWriter bw;
 		try{
-			bw = new BufferedWriter(new FileWriter("abc.txt"));
+			bw = new BufferedWriter(new FileWriter("bank_user_data.txt"));
 			int i=0;
 			int n = list.size();
 			System.out.println(list.size());

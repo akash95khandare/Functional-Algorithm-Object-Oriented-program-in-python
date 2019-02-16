@@ -28,40 +28,25 @@ public class Banking {
 		bankUser.modifyAmount(name, newAmt);
 	}
 	
-	public void bankSystem() {
-		System.out.println("Welcome in bank system");
-		String name = u.getNext("Enter your name : ");
+	public boolean isBankUser(String name) {
 		if(!bankUser.search(name)) {
-			createAccount(name);
-			System.out.println("Account created..");
-			bankSystem();
+			return true;
 		}else {
-			System.out.println("1. Withdraw\n2. Deposit");
-			int choice = u.getInt("Select one of that : ");
-			switch(choice) {
-				case 1:
-					double amt = u.getDouble("Enter amount for deposit : ");
-					withdraw(name,amt);
-					break;
-				case 2:
-					double amount = u.getDouble("Enter amount for deposit : ");
-					deposit(name, amount);
-					System.out.println("Deposit done.");
-					break;
-			}
+			return false;
 		}
 	}
 	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-		Banking bank = new Banking();
+	
+	public void restoreUserData() {
 		Restore res = new Restore();
 		String data[] = res.readFromFile().split(" ");
 		for(int i=0; i<data.length-1; i+=2) {
 			bankUser.add(data[i],Double.parseDouble(data[i+1]));
 		}
-		bank.bankSystem();
+	}
+	
+	public void storeUserData() {
+		Restore res = new Restore();
 		res.writeToFile(bankUser);
 	}
 

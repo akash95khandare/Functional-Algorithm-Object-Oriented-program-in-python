@@ -2,15 +2,15 @@ package com.bridgeLab.dataStructure.linkedList;
 
 public class LinkedListInt {
 
-	Node head;
+	NodeInt head;
 	public void add(int item) {
-		Node newNode = new Node();
+		NodeInt newNode = new NodeInt();
 		newNode.data = item;
 		newNode.next = null;
 		
 		if(head==null) head = newNode;
 		else {
-			Node tempNode = head;
+			NodeInt tempNode = head;
 			while(tempNode.next!=null) {
 				tempNode = tempNode.next;
 			}
@@ -19,13 +19,13 @@ public class LinkedListInt {
 	}
 	
 	public void remove(int item) {
-		Node tempNode = head;
-		Node previousNode = tempNode;
+		NodeInt tempNode = head;
+		NodeInt previousNode = tempNode;
 		 do{
 			 if(head.data==item) {
 				 head = tempNode.next;
 			 }
-			 else if(tempNode.data!=item.) {
+			 else if(tempNode.data!=item) {
 				previousNode = tempNode;
 				tempNode = tempNode.next;
 			}else {
@@ -36,7 +36,7 @@ public class LinkedListInt {
 	}	
 
 	public boolean search(int item) {
-		Node tempNode = head;
+		NodeInt tempNode = head;
 		while(tempNode!=null){
 				if(tempNode.data==item) return true;
 				tempNode = tempNode.next;
@@ -55,7 +55,7 @@ public class LinkedListInt {
 	}
 
 	public int size() {
-		Node tempNode = head;
+		NodeInt tempNode = head;
 		int count = 0;
 		
 		if(tempNode!=null) {
@@ -68,27 +68,27 @@ public class LinkedListInt {
 	}
 
 	public void display() {
-		Node tempNode = head;
+		NodeInt tempNode = head;
 		while(tempNode!=null){
 			System.out.print(tempNode.data+" ");
 			tempNode = tempNode.next;
 		}
 	}
 
-	public void addAfter(Node previousNode,Node newNode) {
+	public void addAfter(NodeInt previousNode,NodeInt newNode) {
 		newNode.next=previousNode.next;
 		previousNode.next=newNode;
 	}
 	
 	public void sort(int item) {
-		Node newNode = new Node();
+		NodeInt newNode = new NodeInt();
 		newNode.data = item;
 		newNode.next = null;
 		if(head==null) {
 			head = newNode;
 		}else {
-			Node tempNode = head;
-			Node previousNode=head;
+			NodeInt tempNode = head;
+			NodeInt previousNode=head;
 			if(head.data>item) {
 				newNode.next = tempNode;
 				head = newNode;
