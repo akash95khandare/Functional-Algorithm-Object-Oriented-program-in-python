@@ -4,6 +4,8 @@ import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 
 import com.bridgeLab.dataStructure.linkedList.LinkedList;
 import com.bridgeLab.dataStructure.linkedList.LinkedListInt;
@@ -31,34 +33,36 @@ public class IoFile {
 	public void writeToFile(LinkedList list,String fileName) {
 		BufferedWriter bw;
 		try{
-			bw = new BufferedWriter(new FileWriter(fileName));
+			bw = new BufferedWriter(new FileWriter(fileName,true));
+			PrintWriter pw = new PrintWriter(bw);
 			int i=0;
 			int n = list.size();
-			System.out.println(list.size());
 			while(i<n) {
 				bw.write(list.pollFirst()+" ");
 				i++;
 			}
-			bw.flush();
+			pw.flush();
+			pw.close();
 			bw.close();
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
 	}
-	
-	public void writeToFile(LinkedListInt list,String fileName) {
-		BufferedWriter bw;
+	public void appendToFile(LinkedListInt list,String fileName) {
+		
 		try{
-			bw = new BufferedWriter(new FileWriter(fileName));
+			BufferedWriter bw = new BufferedWriter(new FileWriter(fileName,true));
+			PrintWriter pw = new PrintWriter(bw);
 			int i=0;
 			int n = list.size();
-			System.out.println(list.size());
 			while(i<n) {
-				bw.write(list.pollFirst()+" ");
+				pw.append(list.pollFirst()+" ");
 				i++;
 			}
-			bw.flush();
+			pw.flush();
+			pw.close();
 			bw.close();
+			
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
