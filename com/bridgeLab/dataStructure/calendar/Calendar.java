@@ -1,13 +1,20 @@
 package com.bridgeLab.dataStructure.calendar;
 
+import com.bridgelab.utility.Utility;
+
 public class Calendar {
 
-	public void calendar() {
+	public void calendar(int year, int m) {
 		Month month = new Month();
-		String mon[][] = month.monthCreation(1,2020);
+		String mon[][] = month.monthCreation(m, year);
+		System.out.println("\t Calender ");
+		String nameMo[] = {"Jan","Feb","Mar","April","May","June","July","Aug","Sep","Oct","Nov","Dec"};
+		System.out.println("\t "+year+" "+nameMo[m-1]);
+		System.out.println("---------------------------------------------");
 		for(int i=0; i<7; i++) {
 			for(int j=0; j<7; j++) {
-				System.out.print(mon[i][j]+"   ");
+				if(mon[i][j]==null) break;
+				System.out.print(mon[i][j]+"    ");
 			}
 			System.out.println();
 		}
@@ -17,7 +24,10 @@ public class Calendar {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Calendar calendar = new Calendar();
-		calendar.calendar();
+		Utility u = new Utility();
+		int year = u.getInt("Enter year : ");
+		int month = u.getInt("Enter month : ");
+		calendar.calendar(year, month);
 	}
 
 }

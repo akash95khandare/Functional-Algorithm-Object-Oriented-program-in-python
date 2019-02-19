@@ -1,7 +1,9 @@
 package com.bridgeLab.dataStructure.banking;
 
+import com.bridgeLab.dataStructure.banking.entity.Customer;
+
 public class Node {
 	Node next;
-	String name;
-	double amount;
+	String accno;
+	Customer cust;
 }

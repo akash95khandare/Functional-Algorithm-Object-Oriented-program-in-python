@@ -1,4 +1,4 @@
-package com.bridgeLab.dataStructure.linkedList;
+package com.bridgeLab.dataStructure.banking.util;
 
 import com.bridgeLab.dataStructure.banking.ListBank;
 import com.bridgeLab.dataStructure.banking.entity.Customer;

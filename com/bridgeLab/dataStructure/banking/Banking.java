@@ -1,21 +1,23 @@
 package com.bridgeLab.dataStructure.banking;
 
+import com.bridgeLab.dataStructure.banking.data.Restore;
+import com.bridgeLab.dataStructure.banking.entity.Customer;
 import com.bridgelab.utility.Utility;
 
 public class Banking {
 
-	static ListBank bankUser = new ListBank();
+	public static ListBank bankUser = new ListBank();
 	Utility u = new Utility();
 	
-	public void createAccount(String name) {
-		bankUser.add(name,0.0);
+	public void createAccount(Customer cust) {
+		bankUser.add(cust);
 	}
 	
-	public void withdraw(String name,double amount) {
-		if(bankUser.getAmount(name)>=amount) {
-			double newAmt = bankUser.getAmount(name)-amount;
-			bankUser.modifyAmount(name, newAmt);
-			System.out.println("Available amount is : "+bankUser.getAmount(name));
+	public void withdraw(Customer cust) {
+		if(bankUser.getAmount(cust).getAmount()>=cust.getAmount()) {
+			double newAmt = bankUser.getAmount(cust).getAmount()-cust.getAmount();
+			bankUser.modifyAmount(cust.getName(), newAmt);
+			System.out.println("Available amount is : "+bankUser.getAmount(cust).getName());
 			System.out.println("Collect the cash..");
 		}
 		else {
@@ -23,13 +25,13 @@ public class Banking {
 		}
 	}
 	
-	public void deposit(String name, double amount) {
-		double newAmt = bankUser.getAmount(name) + amount;
-		bankUser.modifyAmount(name, newAmt);
+	public void deposit(Customer cust) {
+		double newAmt = bankUser.getAmount(cust).getAmount() + cust.getAmount();
+		bankUser.modifyAmount(cust.getName(), newAmt);
 	}
 	
-	public boolean isBankUser(String name) {
-		if(!bankUser.search(name)) {
+	public boolean isBankUser(Customer cust) {
+		if(!bankUser.search(cust)) {
 			return true;
 		}else {
 			return false;
@@ -37,15 +39,7 @@ public class Banking {
 	}
 	
 	
-	public void restoreUserData() {
-		Restore res = new Restore();
-		String data[] = res.readFromFile().split(" ");
-		for(int i=0; i<data.length-1; i+=2) {
-			bankUser.add(data[i],Double.parseDouble(data[i+1]));
-		}
-	}
-	
-	public void storeUserData() {
+	public void setUsersData() {
 		Restore res = new Restore();
 		res.writeToFile(bankUser);
 	}

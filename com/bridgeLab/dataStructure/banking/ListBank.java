@@ -1,13 +1,16 @@
 package com.bridgeLab.dataStructure.banking;
 
 import com.bridgeLab.dataStructure.banking.Node;
+import com.bridgeLab.dataStructure.banking.data.Restore;
+import com.bridgeLab.dataStructure.banking.entity.Customer;
 
 public class ListBank {
 
 	Node head;
-	public void add(String item) {
+	
+	public void add(Customer cust) {
 		Node newNode = new Node();
-		newNode.name = item;
+		newNode.cust = cust;
 		newNode.next = null;
 		
 		if(head==null) head = newNode;
@@ -19,68 +22,29 @@ public class ListBank {
 			tempNode.next = newNode;
 		}
 	}
-	
-	public void add(String item,double amount) {
-		Node newNode = new Node();
-		newNode.name = item;
-		newNode.amount = amount;
-		newNode.next = null;
-		
-		if(head==null) head = newNode;
-		else {
-			Node tempNode = head;
-			while(tempNode.next!=null) {
-				tempNode = tempNode.next;
-			}
-			tempNode.next = newNode;
-		}
-	}
-	
-	public void remove(String item) {
-		Node tempNode = head;
-		Node previousNode = tempNode;
-		 do{
-			 if(head.name.hashCode()==item.hashCode()) {
-				 head = tempNode.next;
-			 }
-			 else if(tempNode.name.hashCode()!=item.hashCode()) {
-				previousNode = tempNode;
-				tempNode = tempNode.next;
-			}else {
-				previousNode.next = tempNode.next;
-				break;
-			}
-		}while(tempNode!=null);
-	}	
 
-	public boolean search(String item) {
+	public boolean search(Customer cust) {
 		Node tempNode = head;
 		while(tempNode!=null){
-				if(tempNode.name.hashCode()==item.hashCode()) return true;
+				if(tempNode.cust.getName().equals(cust.getName())) return true;
 				tempNode = tempNode.next;
 			}
 		 return false;
 	}
 
-	public double getAmount(String item) {
+	public Customer getAmount(Customer cust) {
 		Node tempNode = head;
 		while(tempNode!=null){
-				if(tempNode.name.hashCode()==item.hashCode()) return tempNode.amount;
+				if(tempNode.cust.getName().equals(cust.getName())) return tempNode.cust;
 				tempNode = tempNode.next;
 			}
-		 return -1;
+		 return null;
 	}
 	
-	public String pollFirst() {
-		String str = head.name;
+	public Customer pollFirst() {
+		Customer cust = head.cust;
 		head = head.next;
-		return str;
-	}
-	
-	public String returnAll() {
-		String str = head.name+" "+head.amount;
-		head = head.next;
-		return str;
+		return cust;
 	}
 	
 	public boolean isEmpty() {
@@ -104,17 +68,17 @@ public class ListBank {
 	public void display() {
 		Node tempNode = head;
 		while(tempNode!=null){
-			System.out.print(tempNode.name+" ");
+			System.out.print(tempNode.cust.getName()+" ");
 			tempNode = tempNode.next;
 		}
 	}
 	
-	public String getLast() {
+	public Customer getLast() {
 		Node tempNode = head;
 		while(tempNode.next!=null) {
 			tempNode = tempNode.next;
 		}
-		return tempNode.name;
+		return tempNode.cust;
 	}
 	
 	public void removeLast() {
@@ -133,12 +97,23 @@ public class ListBank {
 
 	public void modifyAmount(String name,double amount) {
 		Node tempNode = head;
-		while(!tempNode.name.equals(name)) {
+		while(!tempNode.cust.getName().equals(name)) {
 			tempNode = tempNode.next;
 			if(tempNode==null) {
 				System.out.println("User not available.");
 			}
 		}
-		tempNode.amount = amount;
+		tempNode.cust.setAmount(amount);;
+	}
+
+	public void getUsersData() {
+		Restore res = new Restore();
+		String data[] = res.readFromFile().split(" ");
+		for(int i=0; i<data.length-1; i+=2) {
+			Customer cust = new Customer();
+			cust.setName(data[i]);
+			cust.setAmount(Double.parseDouble(data[i+1]));
+			add(cust);
+		}
 	}
 }

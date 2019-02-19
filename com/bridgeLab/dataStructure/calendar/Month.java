@@ -15,15 +15,14 @@ public class Month {
 
 	public String[][] monthCreation(int mon,int year) {
 		int day = decision(year);
-		System.out.println(day);
+//		System.out.println(day);
 		int temp=0;
 		for(int i=0; i<mon-1; i++) {
-			System.out.println("111");
 			temp = temp+mn[i]%7;
 		}
 		if(u.isLeapYear(year) && mon>2) temp+=1;
 		temp=temp%7+day;
-		System.out.println(temp);
+//		System.out.println(temp);
 		month[0][0]="S";
 		month[0][1]="M";
 		month[0][2]="T";
@@ -35,7 +34,7 @@ public class Month {
 		for(int i=1; i<7; i++) {
 			for(int j=0; j<7; j++) {
 				if(temp>1) {
-				month[i][j]="  ";
+				month[i][j]=" ";
 				temp--;
 				continue;
 				}
@@ -43,10 +42,12 @@ public class Month {
 					month[i][j]=String.valueOf(tempStart);
 					tempStart++;
 				}else {
-					if(mon==2) month[i][j]=String.valueOf(29); mon++;
-					month[i][j]="  ";
+					if(mon==2) {
+						month[i][j]=String.valueOf(29); 
+						mon++;
+						break;
+					}
 				}
-				
 			}
 		}
 		return month;
