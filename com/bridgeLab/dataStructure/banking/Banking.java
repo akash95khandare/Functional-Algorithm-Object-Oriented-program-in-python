@@ -7,8 +7,8 @@ import com.bridgelab.utility.Utility;
 
 public class Banking {
 
-	public static ListBank bankUser = new ListBank();
-//	static LinkedList bankUser = new LinkedList();
+//	public static ListBank bankUser = new ListBank();
+	static LinkedList bankUser = new LinkedList();
 	Utility u = new Utility();
 	
 	public void createAccount(Customer cust) {
@@ -16,10 +16,11 @@ public class Banking {
 	}
 	
 	public void withdraw(Customer cust) {
-		if(bankUser.getAmount(cust).getAmount()>=cust.getAmount()) {
-			double newAmt = bankUser.getAmount(cust).getAmount()-cust.getAmount();
+		Customer cust1 =(Customer) bankUser.getAmount(cust);
+		if(cust1.getAmount()>=cust.getAmount()) {
+			double newAmt = cust1.getAmount()-cust.getAmount();
 			bankUser.modifyAmount(cust.getName(), newAmt);
-			System.out.println("Available amount is : "+bankUser.getAmount(cust).getName());
+			System.out.println("Available amount is : "+cust1.getName());
 			System.out.println("Collect the cash..");
 		}
 		else {
@@ -28,7 +29,8 @@ public class Banking {
 	}
 	
 	public void deposit(Customer cust) {
-		double newAmt = bankUser.getAmount(cust).getAmount() + cust.getAmount();
+		Customer cust1 =(Customer) bankUser.getAmount(cust);
+		double newAmt = cust1.getAmount() + cust.getAmount();
 		bankUser.modifyAmount(cust.getName(), newAmt);
 	}
 	

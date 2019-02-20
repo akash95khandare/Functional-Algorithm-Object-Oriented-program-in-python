@@ -4,8 +4,8 @@ package com.bridgelab.utility;
 public class Stack {
 
 	LinkedList stack = new LinkedList();
-	public void push(String item) {
-		stack.add(item);
+	public void push(Object obj) {
+		stack.add(obj);
 	}
 	
 	public void pop() {

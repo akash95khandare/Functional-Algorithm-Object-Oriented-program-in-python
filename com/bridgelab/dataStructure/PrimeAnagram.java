@@ -4,7 +4,7 @@ package com.bridgelab.dataStructure;
 
 import java.util.ArrayList;
 
-import com.bridgeLab.dataStructure.banking.util.Queue;
+import com.bridgelab.utility.Queue;
 import com.bridgelab.utility.Utility;
 
 /**
@@ -34,9 +34,9 @@ public class PrimeAnagram {
 		// TODO Auto-generated method stub
 		PrimeAnagram p = new PrimeAnagram();
 		Queue queue = p.primeAnagram();
-		int len = queue.sizeOfList();
+		int len = queue.size();
 		for(int i=0; i<len; i++) {
-			System.out.print(queue.dequeueOne()+" ");
+			System.out.print(queue.dequeue()+" ");
 		}
 	}
 

@@ -1,6 +1,6 @@
 package com.bridgelab.dataStructure;
 
-import com.bridgeLab.dataStructure.linkedList.Stack;
+import com.bridgelab.utility.Stack;
 
 public class BalancedParentheses {
 

@@ -5,9 +5,8 @@ import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
 
-import com.bridgeLab.dataStructure.banking.ListBank;
 import com.bridgeLab.dataStructure.banking.entity.Customer;
-import com.bridgeLab.dataStructure.linkedList.LinkedList;
+import com.bridgelab.utility.LinkedList;
 
 public class Restore {
 
@@ -29,14 +28,14 @@ public class Restore {
 		return "None";
 	}
 	
-	public void writeToFile(ListBank list) {
+	public void writeToFile(LinkedList list) {
 		BufferedWriter bw;
 		try{
 			bw = new BufferedWriter(new FileWriter("bank_user_data.txt"));
 			int i=0;
 			int n = list.size();
 			while(i<n) {
-				Customer cust = list.pollFirst();
+				Customer cust =(Customer) list.pollFirst();
 				bw.write(cust.getName()+" "+cust.getAmount()+" ");
 				i++;
 			}

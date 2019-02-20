@@ -2,7 +2,7 @@ package com.bridgeLab.dataStructure.banking;
 
 import com.bridgeLab.dataStructure.banking.entity.Customer;
 import com.bridgeLab.dataStructure.banking.service.CustomerService;
-import com.bridgeLab.dataStructure.banking.util.Queue;
+import com.bridgelab.utility.Queue;
 import com.bridgelab.utility.Utility;
 
 

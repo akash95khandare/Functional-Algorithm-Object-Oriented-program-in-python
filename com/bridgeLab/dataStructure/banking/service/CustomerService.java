@@ -2,7 +2,7 @@ package com.bridgeLab.dataStructure.banking.service;
 
 import com.bridgeLab.dataStructure.banking.Banking;
 import com.bridgeLab.dataStructure.banking.entity.Customer;
-import com.bridgeLab.dataStructure.banking.util.Queue;
+import com.bridgelab.utility.Queue;
 import com.bridgelab.utility.Utility;
 
 public class CustomerService {
@@ -33,7 +33,7 @@ public class CustomerService {
 
 
 	public void casher(Queue queue,Utility u,Banking bank) {
-		Customer cust = queue.dequeue();
+		Customer cust = (Customer)queue.dequeue();
 		if (bank.isBankUser(cust)) {
 			System.out.println(cust.getName() + ", your account not available. First you should be created account");
 			String name = u.getNext("Enter your name for creating account: ");
