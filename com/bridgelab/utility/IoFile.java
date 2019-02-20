@@ -1,4 +1,5 @@
-package com.bridgeLab.dataStructure;
+package com.bridgelab.utility;
+
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -6,9 +7,6 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-
-import com.bridgeLab.dataStructure.linkedList.LinkedList;
-import com.bridgeLab.dataStructure.linkedList.LinkedListInt;
 
 public class IoFile {
 
@@ -33,7 +31,7 @@ public class IoFile {
 	public void writeToFile(LinkedList list,String fileName) {
 		BufferedWriter bw;
 		try{
-			bw = new BufferedWriter(new FileWriter(fileName,true));
+			bw = new BufferedWriter(new FileWriter(fileName));
 			PrintWriter pw = new PrintWriter(bw);
 			int i=0;
 			int n = list.size();
@@ -48,7 +46,7 @@ public class IoFile {
 			e.printStackTrace();
 		}
 	}
-	public void appendToFile(LinkedListInt list,String fileName) {
+	public void appendToFile(LinkedList list,String fileName) {
 		
 		try{
 			BufferedWriter bw = new BufferedWriter(new FileWriter(fileName,true));

@@ -1,7 +1,9 @@
-package com.bridgeLab.dataStructure;
+package com.bridgelab.dataStructure;
 
 import java.util.ArrayList;
+
 import com.bridgelab.utility.Utility;
+
 
 public class Anagram2DArra {
 

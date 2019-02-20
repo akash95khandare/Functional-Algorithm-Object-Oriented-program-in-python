@@ -1,14 +1,16 @@
-package com.bridgeLab.dataStructure;
+package com.bridgelab.dataStructure;
 
 import java.io.FileWriter;
 import java.io.IOException;
 
-import com.bridgeLab.dataStructure.linkedList.LinkedListInt;
+import com.bridgelab.utility.IoFile;
+import com.bridgelab.utility.LinkedList;
 import com.bridgelab.utility.Utility;
+
 
 public class HashingSearch {
 
-	public void hashingSearch(LinkedListInt list[], String[] num) {
+	public void hashingSearch(LinkedList list[], String[] num) {
 		for(int i=0; i<num.length; i++) {
 			int number = Integer.parseInt(num[i]);
 			int dec = number%11;
@@ -16,7 +18,7 @@ public class HashingSearch {
 		}
 	}
 	
-	public void search(int number,LinkedListInt list[]) {
+	public void search(int number,LinkedList list[]) {
 		int dec = number%11;
 		if(list[dec].search(number)) {
 			list[dec].remove(number);
@@ -30,12 +32,12 @@ public class HashingSearch {
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 		HashingSearch h = new HashingSearch();
-		LinkedListInt list[] = new LinkedListInt[11];
+		LinkedList list[] = new LinkedList[11];
 		Utility u = new Utility();
 		IoFile io = new IoFile();
 		String num[] = 	io.readFromFile("number.txt").split(" ");
 		for(int i=0; i<11; i++) {
-			list[i] = new LinkedListInt();
+			list[i] = new LinkedList();
 		}
 		h.hashingSearch(list, num);
 		for(int i=0; i<11; i++) {

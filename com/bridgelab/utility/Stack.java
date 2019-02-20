@@ -1,6 +1,5 @@
-package com.bridgeLab.dataStructure.linkedList;
+package com.bridgelab.utility;
 
-import com.bridgeLab.dataStructure.linkedList.LinkedList;
 
 public class Stack {
 
@@ -13,10 +12,10 @@ public class Stack {
 		stack.removeLast();
 	}
 	
-	public String peak() {
+	public Object peak() {
 		if(stack.isEmpty()) return "-1";
-		String str = stack.getLast();
-		return str;
+		Object obj = stack.getLast();
+		return obj;
 	}
 	
 	public boolean isEmpty() {

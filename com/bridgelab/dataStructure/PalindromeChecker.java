@@ -1,6 +1,6 @@
-package com.bridgeLab.dataStructure;
+package com.bridgelab.dataStructure;
 
-import com.bridgeLab.dataStructure.banking.util.Queue;
+import com.bridgelab.utility.Queue;
 import com.bridgelab.utility.Utility;
 
 public class PalindromeChecker {
@@ -13,8 +13,8 @@ public class PalindromeChecker {
 		}
 		int j = s.length-1;
 		int count=0;
-		while(queue.sizeOfList()>0) {
-			if(queue.dequeueOne().equals(s[j])) {
+		while(queue.size()>0) {
+			if(queue.dequeue().equals(s[j])) {
 				count++;
 				j--;
 			}

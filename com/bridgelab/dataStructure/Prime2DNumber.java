@@ -1,4 +1,4 @@
-package com.bridgeLab.dataStructure;
+package com.bridgelab.dataStructure;
 
 import java.util.ArrayList;
 

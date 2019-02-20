@@ -2,11 +2,13 @@ package com.bridgeLab.dataStructure.banking;
 
 import com.bridgeLab.dataStructure.banking.data.Restore;
 import com.bridgeLab.dataStructure.banking.entity.Customer;
+import com.bridgelab.utility.LinkedList;
 import com.bridgelab.utility.Utility;
 
 public class Banking {
 
 	public static ListBank bankUser = new ListBank();
+//	static LinkedList bankUser = new LinkedList();
 	Utility u = new Utility();
 	
 	public void createAccount(Customer cust) {
