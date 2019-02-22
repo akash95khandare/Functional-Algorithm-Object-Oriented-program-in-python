@@ -1,4 +1,4 @@
-import com.bridgelab.functional.Utility as u
+import com.bridgelab.util.Utility as u
 
 print("find the roots of the equation a*x*x + b*x + c")
 a = int(input("Enter a : "))

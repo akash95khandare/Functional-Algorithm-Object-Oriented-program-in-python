@@ -1,4 +1,4 @@
-from com.bridgelab.functional.Utility import toBinary, swapNibbles, toDecimal
+from com.bridgelab.util.Utility import toBinary, swapNibbles, toDecimal
 
 decimal = int(input("Enter decimal number : "))
 binary = toBinary(decimal)

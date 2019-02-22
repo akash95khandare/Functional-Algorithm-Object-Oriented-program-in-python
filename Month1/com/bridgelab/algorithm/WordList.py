@@ -1,22 +1,9 @@
-from com.bridgelab.functional.Utility import insertionSort, binary, bubbleSort, mergeSort
+from com.bridgelab.util.Utility import wordList, readFromFile
 
-
-def wordList():
-    f = open("abc.txt", 'r')
-    word = ""
-    for i in f:
-        word = word + i
-    st = {}
-    st = word.split("\n")
-    sts = bubbleSort(list(st))
-    print(sts)
-    mid = binary(sts, 0, len(sts) - 1, "about")
-    print(mid)
-
-
-arr = [5, 4, 12, 78, 56, 1, 2, 3]
-print(insertionSort(arr))
-
-print(mergeSort(arr, 0, len(arr) - 1))
-print(arr)
-wordList()
+sts = readFromFile()
+print(sts)
+key = input("Enter word for search : ")
+if wordList(key, sts):
+    print("Word found.")
+else:
+    print("Word not found.")

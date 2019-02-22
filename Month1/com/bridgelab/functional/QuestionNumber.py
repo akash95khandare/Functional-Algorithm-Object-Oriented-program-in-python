@@ -1,16 +1,5 @@
-from com.bridgelab.functional.Utility import getInput
+from com.bridgelab.util.Utility import questionToFindYourNumber
 
-
-def questionToFindYourNumber(start, last):
-    while start <= last:
-        mid = int((start + last) / 2)
-        if getInput("are you guess this number : ", mid) == 1:
-            print("Number found.")
-            break
-        elif int(getInput("If your number will greater than then enter 1 else 0 : ", mid)) == 1:
-            start = mid + 1
-        elif int(getInput("If your number will less than then enter 1 else 0 : ", mid)) == 1:
-            last = mid - 1
-
-
-questionToFindYourNumber(1, 10)
+start = int(input("Enter start range : "))
+end = int(input("Enter end : "))
+questionToFindYourNumber(start, end)

@@ -1,4 +1,6 @@
-import com.bridgelab.functional.Utility as u
+import com.bridgelab.util.Utility as u
 
-arr = u.getTwoDArr(3, 3)
+r = int(input("Enter row value : "))
+c = int(input("Enter column value : "))
+arr = u.getTwoDArr(r, c)
 u.displayTwoDArr(arr)

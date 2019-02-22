@@ -1,4 +1,4 @@
-from com.bridgelab.functional.Utility import *
+from com.bridgelab.util.Utility import *
 
 start = startWatch()
 print(stopWatch(start))

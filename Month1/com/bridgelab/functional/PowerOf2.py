@@ -1,4 +1,4 @@
-from com.bridgelab.functional import Utility
+from com.bridgelab.util import Utility
 
 power = int(input("Enter a range : "))
 Utility.powerOfTwo(power)

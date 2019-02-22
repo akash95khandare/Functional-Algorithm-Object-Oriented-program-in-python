@@ -1,4 +1,4 @@
-from com.bridgelab.functional.Utility import dayOfWeek
+from com.bridgelab.util.Utility import dayOfWeek
 
 day = int(input("Enter a day : "))
 month = int(input("Enter a month : "))

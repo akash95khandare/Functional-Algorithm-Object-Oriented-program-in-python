@@ -1,3 +1,3 @@
-import com.bridgelab.functional.Utility as u
+import com.bridgelab.util.Utility as u
 
 u.ticTacToe()

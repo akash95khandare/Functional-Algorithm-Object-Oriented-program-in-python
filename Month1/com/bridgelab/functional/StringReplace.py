@@ -1,3 +1,3 @@
-from com.bridgelab.functional import Utility
+from com.bridgelab.util import Utility
 
 Utility.stringReplace()

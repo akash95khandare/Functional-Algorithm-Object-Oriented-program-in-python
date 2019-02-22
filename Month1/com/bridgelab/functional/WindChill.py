@@ -1,4 +1,4 @@
-from com.bridgelab.functional import Utility
+from com.bridgelab.util import Utility
 
 t = int(input("Enter temperature : "))
 v = int(input("Enter wind speed : "))

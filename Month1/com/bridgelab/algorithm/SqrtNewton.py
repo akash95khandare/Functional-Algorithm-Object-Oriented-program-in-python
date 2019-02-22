@@ -9,4 +9,5 @@ def sqrt(c):
         print(epsilon * t)
 
 
-sqrt(16)
+n = int(input("Enter number : "))
+sqrt(n)
