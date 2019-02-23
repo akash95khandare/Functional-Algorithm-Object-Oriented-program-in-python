@@ -22,10 +22,10 @@ def getInput(msg=None, n=None):
 
 
 def stringReplace():
-    str = "Hello <<UserName>>, How are you?"
+    str1 = "Hello <<UserName>>, How are you?"
     name = input("Enter your name : ")
-    str = str.replace("<<UserName>>", name)
-    print(str)
+    str1 = str1.replace("<<UserName>>", name)
+    print(str1)
 
 
 #################################################################################
@@ -372,7 +372,6 @@ def couponGenerator(n):
         for i in range(j):
             if li[i] == c:
                 c = random.randrange(100, 500, 5)
-                # i = 0
         li[j] = int(c)
         j += 1
     return li
@@ -388,10 +387,10 @@ def gambler(goal):
     doller = 1
     win, loss = 0, 0
     while True:
-        n = int(input("You guess some number between 1 to 3"))
-        g = random.randrange(1, 4, 1)
+        n = int(input("You guess some number between 1 to 2 :"))
+        g = random.randrange(1, 3, 1)
         if n == g:
-            doller += 1;
+            doller += 1
             win += 1
             print("You won this bet.")
         else:
@@ -404,10 +403,10 @@ def gambler(goal):
         elif doller == goal:
             print("You achived your goal.")
             break
+    print("Tatal match : ", (win + loss))
+    print("Percentage of win : ", ((win * 100) / (win + loss)))
+    print("Percentage of loss : ", ((loss * 100) / (win + loss)))
 
-
-# print("Percentage of win : ",((win*100)/win+loss))
-# print("Percentage of loss : ",((loss*100)/win+loss))
 
 #################################################################################
 # 

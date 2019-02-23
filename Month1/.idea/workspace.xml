@@ -5,42 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43b45ff9-34c6-4425-939d-50e6b7e81c08" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/com/bridgelab/util/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/com/bridgelab/DataStructure/BalancedParentheses.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/com/bridgelab/DataStructure/Banking/Casher.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/com/bridgelab/DataStructure/Banking/Customer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/com/bridgelab/DataStructure/Banking/GetAndStore.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/com/bridgelab/DataStructure/Banking/bank_user_data.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/com/bridgelab/DataStructure/OrderedList.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/com/bridgelab/DataStructure/PalindromeChecker.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/com/bridgelab/DataStructure/UnOrderedList.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/com/bridgelab/DataStructure/abc.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/com/bridgelab/util/DeQueue.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/com/bridgelab/util/IO.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/com/bridgelab/util/LinkedList.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/com/bridgelab/util/Node.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/com/bridgelab/util/Queue.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/com/bridgelab/util/Sample.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/com/bridgelab/util/Stack.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/bridgelab/algorithm/Anagram.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/bridgelab/algorithm/Anagram.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/bridgelab/algorithm/BubbleSort.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/bridgelab/algorithm/BubbleSort.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/bridgelab/algorithm/DayOfWeek.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/bridgelab/algorithm/DayOfWeek.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/bridgelab/algorithm/Insertion.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/bridgelab/algorithm/Insertion.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/bridgelab/algorithm/Merge.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/bridgelab/algorithm/PrimeNumber.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/bridgelab/algorithm/PrimeNumber.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/bridgelab/algorithm/Sample.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/bridgelab/algorithm/SqrtNewton.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/bridgelab/algorithm/SqrtNewton.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/bridgelab/algorithm/SwapNibbles.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/bridgelab/algorithm/SwapNibbles.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/bridgelab/algorithm/TemperaturConversion.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/bridgelab/algorithm/TemperaturConversion.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/bridgelab/algorithm/ToBinary.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/bridgelab/algorithm/ToBinary.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/bridgelab/algorithm/VendingMachine.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/bridgelab/algorithm/VendingMachine.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/bridgelab/algorithm/WordList.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/bridgelab/algorithm/WordList.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/bridgelab/functional/Binary.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/bridgelab/algorithm/BinarySearch.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/bridgelab/functional/CouponNumber.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/bridgelab/functional/CouponNumber.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/bridgelab/functional/EuclideanDistance.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/bridgelab/functional/EuclideanDistance.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/bridgelab/functional/FlipCoin.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/bridgelab/functional/FlipCoin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/bridgelab/functional/Gambler.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/bridgelab/functional/Gambler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/bridgelab/functional/HarmonicValue.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/bridgelab/functional/HarmonicValue.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/bridgelab/functional/LeapYear.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/bridgelab/functional/LeapYear.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/bridgelab/functional/Permutation.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/bridgelab/functional/Permutation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/bridgelab/functional/PowerOf2.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/bridgelab/functional/PowerOf2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/bridgelab/functional/PrimeFactor.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/bridgelab/functional/PrimeFactor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/bridgelab/functional/Quadratic.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/bridgelab/functional/Quadratic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/bridgelab/functional/QuestionNumber.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/bridgelab/functional/QuestionNumber.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/bridgelab/functional/StopWatch.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/bridgelab/functional/StopWatch.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com/bridgelab/algorithm/mergeSort.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/bridgelab/algorithm/mergeSort.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/com/bridgelab/functional/StringReplace.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/bridgelab/functional/StringReplace.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/bridgelab/functional/SumOfThree.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/bridgelab/functional/SumOfThree.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/bridgelab/functional/TicTacToe.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/bridgelab/functional/TicTacToe.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/bridgelab/functional/TwoDArray.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/bridgelab/functional/TwoDArray.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/bridgelab/functional/Utility.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/bridgelab/util/Utility.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/bridgelab/functional/Weather.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/bridgelab/algorithm/mergeSort.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/com/bridgelab/functional/WindChill.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/bridgelab/functional/WindChill.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com/bridgelab/util/Utility.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/bridgelab/util/Utility.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,26 +35,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/com/bridgelab/util/Utility.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/com/bridgelab/DataStructure/Banking/Customer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="586" column="23" lean-forward="true" selection-start-line="586" selection-start-column="23" selection-end-line="586" selection-end-column="23" />
+            <state relative-caret-position="34">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/com/bridgelab/DataStructure/Banking/Casher.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
               <folding>
-                <element signature="e#0#11#0" expanded="true" />
+                <element signature="e#0#86#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/com/bridgelab/algorithm/mergeSort.py">
+        <entry file="file://$PROJECT_DIR$/com/bridgelab/util/DeQueue.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="204">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/com/bridgelab/DataStructure/PalindromeChecker.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="16" selection-start-column="16" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -89,19 +89,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Functional/QuestionNumber.py" />
-        <option value="$PROJECT_DIR$/Functional/Binary.py" />
-        <option value="$PROJECT_DIR$/Functional/CouponNumber.py" />
-        <option value="$PROJECT_DIR$/Functional/EuclideanDistance.py" />
-        <option value="$PROJECT_DIR$/Functional/FlipCoin.py" />
-        <option value="$PROJECT_DIR$/Functional/Gambler.py" />
-        <option value="$PROJECT_DIR$/Functional/HarmonicValue.py" />
-        <option value="$PROJECT_DIR$/Functional/LeapYear.py" />
-        <option value="$PROJECT_DIR$/Functional/Permutation.py" />
-        <option value="$PROJECT_DIR$/Functional/PowerOf2.py" />
-        <option value="$PROJECT_DIR$/Functional/PrimeFactor.py" />
-        <option value="$PROJECT_DIR$/Functional/Quadratic.py" />
-        <option value="$PROJECT_DIR$/Functional/StopWatch.py" />
         <option value="$PROJECT_DIR$/Functional/StringReplace.py" />
         <option value="$PROJECT_DIR$/Functional/SumOfThree.py" />
         <option value="$PROJECT_DIR$/Functional/TicTacToe.py" />
@@ -121,7 +108,6 @@
         <option value="$PROJECT_DIR$/com/bridgelab/algorithm/ToBinary.py" />
         <option value="$PROJECT_DIR$/com/bridgelab/algorithm/SwapNibbles.py" />
         <option value="$PROJECT_DIR$/com/bridgelab/algorithm/Sample.py" />
-        <option value="$PROJECT_DIR$/com/bridgelab/algorithm/abc.txt" />
         <option value="$PROJECT_DIR$/com/bridgelab/functional/Utility.py" />
         <option value="$PROJECT_DIR$/com/bridgelab/functional/TwoDArray.py" />
         <option value="$PROJECT_DIR$/com/bridgelab/functional/BinarySearch.py" />
@@ -134,12 +120,30 @@
         <option value="$PROJECT_DIR$/com/bridgelab/functional/Distance.py" />
         <option value="$PROJECT_DIR$/com/bridgelab/functional/QuestionNumber.py" />
         <option value="$PROJECT_DIR$/com/bridgelab/algorithm/SqrtNewton.py" />
+        <option value="$PROJECT_DIR$/com/bridgelab/functional/StringReplace.py" />
         <option value="$PROJECT_DIR$/com/bridgelab/algorithm/mergeSort.py" />
         <option value="$PROJECT_DIR$/com/bridgelab/util/Utility.py" />
+        <option value="$PROJECT_DIR$/com/bridgelab/util/Node.py" />
+        <option value="$PROJECT_DIR$/com/bridgelab/algorithm/abc.txt" />
+        <option value="$PROJECT_DIR$/com/bridgelab/DataStructure/UnOrderedList.py" />
+        <option value="$PROJECT_DIR$/com/bridgelab/DataStructure/OrderedList.py" />
+        <option value="$PROJECT_DIR$/com/bridgelab/DataStructure/abc.txt" />
+        <option value="$PROJECT_DIR$/com/bridgelab/util/Sample.py" />
+        <option value="$PROJECT_DIR$/com/bridgelab/DataStructure/BalancedParentheses.py" />
+        <option value="$PROJECT_DIR$/com/bridgelab/util/Stack.py" />
+        <option value="$PROJECT_DIR$/com/bridgelab/util/Queue.py" />
+        <option value="$PROJECT_DIR$/com/bridgelab/util/IO.py" />
+        <option value="$PROJECT_DIR$/com/bridgelab/DataStructure/Banking/bank_user_data.txt" />
+        <option value="$PROJECT_DIR$/com/bridgelab/DataStructure/Banking/Customer.py" />
+        <option value="$PROJECT_DIR$/com/bridgelab/DataStructure/Banking/GetAndStore.py" />
+        <option value="$PROJECT_DIR$/com/bridgelab/DataStructure/Banking/Casher.py" />
+        <option value="$PROJECT_DIR$/com/bridgelab/util/LinkedList.py" />
+        <option value="$PROJECT_DIR$/com/bridgelab/util/DeQueue.py" />
+        <option value="$PROJECT_DIR$/com/bridgelab/DataStructure/PalindromeChecker.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="10" />
     <option name="y" value="47" />
     <option name="width" value="1346" />
@@ -151,6 +155,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -174,30 +179,45 @@
               <item name="Month1" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="bridgelab" type="462c0819:PsiDirectoryNode" />
-              <item name="algorithm" type="462c0819:PsiDirectoryNode" />
+              <item name="DataStructure" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Month1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Month1" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="bridgelab" type="462c0819:PsiDirectoryNode" />
+              <item name="DataStructure" type="462c0819:PsiDirectoryNode" />
+              <item name="Banking" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Month1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Month1" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="bridgelab" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$/com/bridgelab/algorithm" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/com/bridgelab/DataStructure" />
+      <recent name="$PROJECT_DIR$/Algorithm" />
+      <recent name="$PROJECT_DIR$/Fuctional" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/com/bridgelab/functional/" />
       <recent name="$PROJECT_DIR$/com/bridgelab/algorithm" />
       <recent name="$PROJECT_DIR$/com/bridgelab/util" />
       <recent name="$PROJECT_DIR$/com/bridgelab/functional" />
       <recent name="$PROJECT_DIR$/Algorithm/com/bridgelab/algorithm" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Algorithm" />
-      <recent name="$PROJECT_DIR$/Fuctional" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -212,8 +232,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.mergeSort">
-    <configuration name="LeapYear" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.Casher">
+    <configuration name="BalancedParentheses" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Month1" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -221,11 +241,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/com/bridgelab/functional" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/com/bridgelab/DataStructure" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/com/bridgelab/functional/LeapYear.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/com/bridgelab/DataStructure/BalancedParentheses.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -234,7 +254,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="QuestionNumber" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Casher" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Month1" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -242,11 +262,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/com/bridgelab/functional" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/com/bridgelab/DataStructure/Banking" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/com/bridgelab/functional/QuestionNumber.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/com/bridgelab/DataStructure/Banking/Casher.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -255,7 +275,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="SumOfThree" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Customer" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Month1" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -263,11 +283,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/com/bridgelab/functional" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/com/bridgelab/DataStructure/Banking" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/com/bridgelab/functional/SumOfThree.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/com/bridgelab/DataStructure/Banking/Customer.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -276,7 +296,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="WordList" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="OrderedList" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Month1" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -284,11 +304,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/com/bridgelab/algorithm" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/com/bridgelab/DataStructure" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/com/bridgelab/algorithm/WordList.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/com/bridgelab/DataStructure/OrderedList.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -297,7 +317,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="mergeSort" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Sample" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Month1" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -305,11 +325,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/com/bridgelab/algorithm" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/com/bridgelab/util" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/com/bridgelab/algorithm/mergeSort.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/com/bridgelab/util/Sample.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -319,19 +339,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.LeapYear" />
-      <item itemvalue="Python.QuestionNumber" />
-      <item itemvalue="Python.SumOfThree" />
-      <item itemvalue="Python.WordList" />
-      <item itemvalue="Python.mergeSort" />
+      <item itemvalue="Python.Sample" />
+      <item itemvalue="Python.OrderedList" />
+      <item itemvalue="Python.BalancedParentheses" />
+      <item itemvalue="Python.Customer" />
+      <item itemvalue="Python.Casher" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.mergeSort" />
-        <item itemvalue="Python.WordList" />
-        <item itemvalue="Python.SumOfThree" />
-        <item itemvalue="Python.QuestionNumber" />
-        <item itemvalue="Python.LeapYear" />
+        <item itemvalue="Python.Casher" />
+        <item itemvalue="Python.Customer" />
+        <item itemvalue="Python.OrderedList" />
+        <item itemvalue="Python.BalancedParentheses" />
+        <item itemvalue="Python.Sample" />
       </list>
     </recent_temporary>
   </component>
@@ -349,23 +369,22 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="10" y="47" width="1346" height="664" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="25" width="1366" height="686" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2494331" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24571854" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32897195" />
-      <window_info anchor="bottom" x="0" y="251" width="1366" height="320" id="Run" order="2" type="WINDOWED" weight="0.058252428" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" x="0" y="55" width="1366" height="656" id="Run" maximized="true" order="2" weight="0.33393177" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39856374" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32815534" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32675046" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32897195" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.21165049" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.21005386" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -383,75 +402,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/com/bridgelab/algorithm/abc.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="10" lean-forward="true" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydevd_bundle/pydevd_trace_dispatch_regular.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-616">
-          <caret line="109" selection-start-line="109" selection-end-line="109" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com/bridgelab/algorithm/Sample.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com/bridgelab/algorithm/Merge.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com/bridgelab/algorithm/Sorting.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com/bridgelab/functional/Weather.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com/bridgelab/functional/Distance.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com/bridgelab/functional/CouponNumber.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com/bridgelab/functional/EuclideanDistance.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="45" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com/bridgelab/functional/FlipCoin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com/bridgelab/functional/Gambler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="7" lean-forward="true" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/com/bridgelab/functional/HarmonicValue.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -463,13 +413,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com/bridgelab/functional/Permutation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="6" lean-forward="true" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -524,24 +467,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/com/bridgelab/functional/StringReplace.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/com/bridgelab/functional/SumOfThree.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="15" lean-forward="true" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com/bridgelab/functional/TicTacToe.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -653,6 +582,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/com/bridgelab/functional/StringReplace.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/bridgelab/functional/TicTacToe.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/bridgelab/algorithm/mergeSort.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="41" lean-forward="true" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/bridgelab/functional/Gambler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/bridgelab/util/Node.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="25" lean-forward="true" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/com/bridgelab/algorithm/WordList.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -660,23 +627,155 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/com/bridgelab/algorithm/mergeSort.py">
+    <entry file="file://$PROJECT_DIR$/com/bridgelab/algorithm/abc.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="17">
+          <caret line="1" column="4" lean-forward="true" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/bridgelab/util/Sample.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="15" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/bridgelab/util/Stack.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/bridgelab/functional/CouponNumber.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/bridgelab/DataStructure/UnOrderedList.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="7" column="32" lean-forward="true" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
           <folding>
-            <element signature="e#0#23#0" expanded="true" />
+            <element signature="e#0#33#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/bridgelab/DataStructure/abc.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="77" lean-forward="true" selection-start-column="77" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/bridgelab/DataStructure/BalancedParentheses.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2018.3/system/python_stubs/-500107821/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="767" column="8" selection-start-line="767" selection-start-column="8" selection-end-line="767" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/com/bridgelab/util/Utility.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="586" column="23" lean-forward="true" selection-start-line="586" selection-start-column="23" selection-end-line="586" selection-end-column="23" />
+        <state relative-caret-position="256">
+          <caret line="351" column="29" lean-forward="true" selection-start-line="351" selection-start-column="29" selection-end-line="351" selection-end-column="29" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/bridgelab/functional/Permutation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="5" lean-forward="true" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/bridgelab/DataStructure/OrderedList.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/bridgelab/util/IO.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="10" lean-forward="true" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/bridgelab/DataStructure/Banking/Customer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/bridgelab/DataStructure/Banking/bank_user_data.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="16" lean-forward="true" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/bridgelab/DataStructure/Banking/GetAndStore.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/bridgelab/DataStructure/Banking/Casher.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#86#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/bridgelab/util/Queue.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/bridgelab/util/LinkedList.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/bridgelab/util/DeQueue.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/bridgelab/DataStructure/PalindromeChecker.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="16" selection-start-column="16" selection-end-column="16" />
         </state>
       </provider>
     </entry>

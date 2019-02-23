@@ -10,5 +10,6 @@ print(arr)
 print("Elapse time : ", stopWatch(start))
 
 start = startWatch()
-print(mergeSort(stringArr, 0, len(arr) - 1))
+mergeSort(stringArr, 0, len(stringArr) - 1)
+print(stringArr)
 print("Elapse time : ", stopWatch(start))
