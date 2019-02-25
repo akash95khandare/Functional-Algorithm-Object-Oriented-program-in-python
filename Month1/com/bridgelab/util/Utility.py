@@ -5,7 +5,7 @@ import datetime
 
 
 #################################################################################
-def getInput(msg=None, n=None):
+def get_input(msg=None, n=None):
     if n == None:
         print(msg)
     elif msg == None:
@@ -21,7 +21,7 @@ def getInput(msg=None, n=None):
 """
 
 
-def stringReplace():
+def string_replace():
     str1 = "Hello <<UserName>>, How are you?"
     name = input("Enter your name : ")
     str1 = str1.replace("<<UserName>>", name)
@@ -36,7 +36,7 @@ def stringReplace():
 """
 
 
-def flipCoin(n):
+def flip_coin(n):
     for i in range(n):
         rand = random.random()
     if rand < 0.5:
@@ -52,17 +52,16 @@ def flipCoin(n):
 """
 
 
-def leapYear(n):
-    if n % 100 == 0:
-        if n % 400 == 0:
-            print("Year is leap")
+def is_leap_year(year):
+    if year % 100 == 0:
+        if year % 400 == 0:
+            return True
         else:
-            print("Year is not leap year")
-    elif n % 4 == 0:
-        print("Year is leap Year")
+            return False
+    elif year % 4 == 0:
+        return True
     else:
-        print("Year is not leap year")
-
+        return False
 
 #################################################################################
 """
@@ -71,7 +70,7 @@ def leapYear(n):
 """
 
 
-def powerOfTwo(power):
+def power_of_two(power):
     for i in range(power + 1):
         if power <= 31:
             print(i, " is power of 2 is : ", int(math.pow(2, i)))
@@ -86,7 +85,7 @@ def powerOfTwo(power):
 """
 
 
-def harmonicValue(n):
+def harmonic_value(n):
     value = 0
     for i in range(1, n + 1):
         value = value + 1 / n
@@ -100,7 +99,7 @@ def harmonicValue(n):
 """
 
 
-def isPrime(n):
+def is_prime(n):
     for i in range(2, n):
         if n % i == 0:
             return False
@@ -114,10 +113,10 @@ def isPrime(n):
 """
 
 
-def primeFactor(n):
+def prime_factor(n):
     print("Prime factor is : ")
     for i in range(2, n):
-        if isPrime(i):
+        if is_prime(i):
             if n % i == 0:
                 print(i, " ")
 
@@ -129,7 +128,7 @@ def primeFactor(n):
 """
 
 
-def sumOfThree(n):
+def sum_of_three(n):
     for i in range(len(n)):
         for j in range(i + 1, len(n)):
             for k in range(j + 1, len(n)):
@@ -143,7 +142,7 @@ def sumOfThree(n):
 """
 
 
-def euclideanDistance(x, y):
+def euclidean_distance(x, y):
     return math.sqrt(math.pow(x, x) + math.pow(y, y))
 
 
@@ -154,7 +153,7 @@ def euclideanDistance(x, y):
 """
 
 
-def rootOfX(a, b, c):
+def root_of_x(a, b, c):
     delta = b * b - 4 * a * c
     x1 = (b + math.sqrt(abs(delta))) / (2 * a)
     x2 = (-b - math.sqrt(abs(delta))) / (2 * a)
@@ -180,7 +179,7 @@ def weather(t, v):
 """
 
 
-def getTwoDArr(r, c):
+def get_two_d_arr(r, c):
     print("Enter a list : ")
     arr = np.zeros((r, c))
     for i in range(r):
@@ -195,7 +194,7 @@ def getTwoDArr(r, c):
 """
 
 
-def displayTwoDArr(arr):
+def display_two_d_arr(arr):
     print(arr)
 
 
@@ -205,26 +204,26 @@ def displayTwoDArr(arr):
 """
 
 
-def ticTacToe():
+def tic_tac_toe():
     arr = np.zeros((3, 3))
     player = int(input("If you want to play first then enter 1 else 2. "))
     cnt = 0
     while cnt < 9:
         if player == 1:
-            showGame(arr)
-            playerCall(arr)
+            show_game(arr)
+            player_call(arr)
             cnt += 1
             player = 2
-            if winCheck(arr, 'X') == -1:
+            if win_check(arr, 'X') == -1:
                 player = -1
         elif player == 2:
             computer(arr)
             cnt += 1
             player = 1
-            if winCheck(arr, 'O') == -1:
+            if win_check(arr, 'O') == -1:
                 player = -1
         else:
-            showGame(arr)
+            show_game(arr)
             break
 
 
@@ -234,7 +233,7 @@ def ticTacToe():
 """
 
 
-def showGame(arr):
+def show_game(arr):
     for i in range(len(arr)):
         for j in range(len(arr)):
             if int(arr[i][j]) != 0:
@@ -251,7 +250,7 @@ def showGame(arr):
 """
 
 
-def playerCall(arr):
+def player_call(arr):
     print("Enter position with x and y co-ordinate")
     posX, posY = int(input()), int(input())
     while True:
@@ -260,8 +259,8 @@ def playerCall(arr):
             break
         else:
             print("This position already marked.")
-            showGame(arr)
-            playerCall(arr)
+            show_game(arr)
+            player_call(arr)
 
 
 #################################################################################
@@ -286,7 +285,7 @@ def computer(arr):
 """
 
 
-def winCheck(arr, ch):
+def win_check(arr, ch):
     c = ord(ch)
     if (arr[0][0] == c and arr[0][1] == c and arr[0][2] == c) \
             or (arr[1][0] == c and arr[1][1] == c and arr[1][2] == c) \
@@ -310,7 +309,7 @@ def winCheck(arr, ch):
 """
 
 
-def startWatch():
+def start_watch():
     start = datetime.datetime.now().microsecond
     return start
 
@@ -321,7 +320,7 @@ def startWatch():
 """
 
 
-def stopWatch(start):
+def stop_watch(start):
     stop = datetime.datetime.now().microsecond
     return stop - start
 
@@ -362,7 +361,7 @@ def permutation(str, l, r):
 """
 
 
-def couponGenerator(n):
+def coupon_generator(n):
     li = [None] * n
     c = random.randrange(100, 500, 5)
     li[0] = int(c)
@@ -419,7 +418,7 @@ def gambler(goal):
 """
 
 
-def isAnagram(str1, str2):
+def is_anagram(str1, str2):
     if len(str1) == len(str2):
         arr = np.full((len(str2)), False)
         cnt = 0
@@ -437,26 +436,12 @@ def isAnagram(str1, str2):
 
 #################################################################################
 """
-    param it will get number b as int type
-    check it is prime or not and then return boolean value
-"""
-
-
-def isPrime(n):
-    for i in range(2, n):
-        if n % i == 0:
-            return False
-    return True
-
-
-#################################################################################
-"""
     Param It will get number n as int type
     Check it is palindrome or not and then return boolean value
 """
 
 
-def isPalindrome(n):
+def is_palindrome(n):
     new = n
     reverse = 0
     while new != 0:
@@ -476,10 +461,10 @@ def isPalindrome(n):
 """
 
 
-def getPrimeNumber(rng):
+def get_prime_number(rng):
     arr = []
     for i in range(2, rng + 1):
-        if isPrime(i):
+        if is_prime(i):
             arr.append(i)
     return arr
 
@@ -491,10 +476,10 @@ def getPrimeNumber(rng):
 """
 
 
-def getPalindrome(arr):
+def get_palindrome(arr):
     newArr = []
     for i in arr:
-        if isPalindrome(i):
+        if is_palindrome(i):
             newArr.append(i)
     return newArr
 
@@ -506,11 +491,11 @@ def getPalindrome(arr):
 """
 
 
-def getAnagram(arr):
+def get_anagram(arr):
     newArr = []
     for i in range(len(arr) - 1):
         for j in range(1 + i, len(arr)):
-            if isAnagram(str(arr[i]), str(arr[j])):
+            if is_anagram(str(arr[i]), str(arr[j])):
                 newArr.append(arr[i])
                 newArr.append(arr[j])
     return newArr
@@ -523,7 +508,7 @@ def getAnagram(arr):
 """
 
 
-def insertionSort(arr):
+def insertion_sort(arr):
     for i in range(1, len(arr)):
         j = i - 1
         while j > -1:
@@ -540,7 +525,7 @@ def insertionSort(arr):
 """
 
 
-def bubbleSort(arr):
+def bubble_sort(arr):
     for i in range(len(arr)):
         for j in range(len(arr) - 1):
             if arr[j] > arr[j + 1]:
@@ -557,11 +542,11 @@ def bubbleSort(arr):
 """
 
 
-def mergeSort(arr, start, end):
+def merge_sort(arr, start, end):
     if start < end:
         mid = int((start + end) / 2)
-        mergeSort(arr, start, mid)
-        mergeSort(arr, mid + 1, end)
+        merge_sort(arr, start, mid)
+        merge_sort(arr, mid + 1, end)
         merge(arr, start, mid, end)
 
 
@@ -613,7 +598,7 @@ def merge(arr, start, mid, end):
 """
 
 
-def binarySearch(arr, start, last, key):
+def binary_search(arr, start, last, key):
     while start <= last:
         mid = int((start + last) / 2)
         if arr[mid] == key:
@@ -631,14 +616,14 @@ def binarySearch(arr, start, last, key):
 """
 
 
-def vendingMachine(change):
+def vending_machine(change):
     arr = (1000, 500, 100, 50, 10, 5, 2, 1)
     for i in arr:
         if change == 0:
             return 0
         elif change >= i:
             print(i)
-            change = vendingMachine(change - i)
+            change = vending_machine(change - i)
 
 
 #################################################################################
@@ -668,11 +653,12 @@ def week(i):
 """
 
 
-def dayOfWeek(d, m, y):
+def day_of_week(d, m, y):
     y0 = y - (14 - m) / 12
     x = y0 + y0 / 4 - y0 / 100 + y0 / 400
     m0 = m + 12 * ((14 - m) / 12) - 2
     d0 = (d + x + 31 * m0 / 12) % 7
+    print(d0)
     return week(int(d0))
 
 
@@ -683,7 +669,7 @@ def dayOfWeek(d, m, y):
 """
 
 
-def toBinary(n):
+def to_binary(n):
     tm = np.zeros(8)
     res = np.zeros(8)
     i = 0
@@ -706,7 +692,7 @@ def toBinary(n):
 """
 
 
-def toDecimal(binary):
+def to_decimal(binary):
     j = 7
     res = 0
     for i in binary:
@@ -723,7 +709,7 @@ def toDecimal(binary):
 """
 
 
-def swapNibbles(binary):
+def swap_nibbles(binary):
     j = 4
     for i in range(4):
         binary[i], binary[j] = binary[j], binary[i]
@@ -737,13 +723,13 @@ def swapNibbles(binary):
 """
 
 
-def readFromFile():
+def read_from_file():
     f = open("abc.txt", 'r')
     word = ""
     for i in f:
         word = word + i
     st = word.split("\n")
-    sts = bubbleSort(list(st))
+    sts = bubble_sort(list(st))
     return sts
 
 
@@ -753,9 +739,9 @@ def readFromFile():
 """
 
 
-def wordList(key, sts):
+def word_list(key, sts):
     print(sts)
-    mid = binarySearch(sts, 0, len(sts) - 1, key)
+    mid = binary_search(sts, 0, len(sts) - 1, key)
     if mid is None:
         return False
     return True
@@ -767,7 +753,7 @@ def wordList(key, sts):
 """
 
 
-def celsiusToFahrenheit(c):
+def celsius_to_fahrenheit(c):
     f = c * 9 / 5 + 32
     return f
 
@@ -778,7 +764,7 @@ def celsiusToFahrenheit(c):
 """
 
 
-def fahrenheitToCelsius(f):
+def fahrenheit_to_celsius(f):
     c = (f - 32) * 5 / 9
     return c
 
@@ -789,14 +775,14 @@ def fahrenheitToCelsius(f):
 """
 
 
-def questionToFindYourNumber(start, last):
+def question_to_find_your_number(start, last):
     while start <= last:
         mid = int((start + last) / 2)
-        if getInput("are you guess this number : ", mid) == 1:
+        if get_input("are you guess this number : ", mid) == 1:
             print("Number found.")
             break
-        elif int(getInput("If your number will greater than then enter 1 else 0 : ", mid)) == 1:
+        elif int(get_input("If your number will greater than then enter 1 else 0 : ", mid)) == 1:
             start = mid + 1
             continue
-        elif int(getInput("If your number will less than then enter 1 else 0 : ", mid)) == 1:
+        elif int(get_input("If your number will less than then enter 1 else 0 : ", mid)) == 1:
             last = mid - 1

@@ -1,6 +1,3 @@
 1234 shubham 500.0
-1234 rohan 500.0
-1234 akash 500.0
-1234 akash 500.0
-1234 akash 500.0
-1234 akash 500.0
+1561 akash 0.0
+1891 sham 0.0

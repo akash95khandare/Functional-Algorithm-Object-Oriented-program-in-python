@@ -46,7 +46,7 @@ class LinkedList:
     def remove(self, obj):
         tempNode = self.head
         previous = self.head
-        if tempNode.object is obj:
+        if tempNode.object == obj:
             self.head = tempNode.next
         else:
             while hash(tempNode.object) != hash(obj):
@@ -109,3 +109,6 @@ class LinkedList:
         newNode.object = obj
         newNode.next = self.head
         self.head = newNode
+
+    def get_head(self):
+        return self.head

@@ -3,6 +3,7 @@ class Customer:
         self.account_no = 0.0
         self.customer_name = None
         self.amount = None
+        self.operation = None
 
     def get_account_no(self):
         return self.account_no
@@ -22,6 +23,12 @@ class Customer:
     def set_amount(self, amount):
         self.amount = amount
 
+    def get_operation(self):
+        return self.operation
+
+    def set_operation(self, operation):
+        self.operation = operation
+
     def toString(self):
         return str(self.get_account_no()) + " " + self.get_customer_name() + " " + str(self.get_amount())
 
@@ -31,4 +38,6 @@ class Customer:
 # cust.set_customer_name("akash")
 # cust.set_amount("500.0")
 # print(cust.toString())
-
+# cust1 = cust
+# cust1.set_amount(800)
+# print(cust.toString())

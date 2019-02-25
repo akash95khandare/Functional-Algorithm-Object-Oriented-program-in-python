@@ -1,4 +1,4 @@
-from com.bridgelab.util.Utility import vendingMachine
+from com.bridgelab.util.Utility import vending_machine
 change = int(input("You want a change : "))
 
-vendingMachine(change)
+vending_machine(change)

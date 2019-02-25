@@ -1,7 +1,7 @@
 import com.bridgelab.util.Utility as u
 
 rng = int(input("Enter range : "))
-arr = u.getPrimeNumber(rng)
+arr = u.get_prime_number(rng)
 print(arr)
-print(u.getPalindrome(arr))
-print(u.getAnagram(arr))
+print(u.get_palindrome(arr))
+print(u.get_anagram(arr))

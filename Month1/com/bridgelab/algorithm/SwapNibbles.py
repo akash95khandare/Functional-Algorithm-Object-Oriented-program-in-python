@@ -1,10 +1,10 @@
-from com.bridgelab.util.Utility import toBinary, swapNibbles, toDecimal
+from com.bridgelab.util.Utility import to_binary, swap_nibbles, to_decimal
 
 decimal = int(input("Enter decimal number : "))
-binary = toBinary(decimal)
+binary = to_binary(decimal)
 print("binary number : ", binary)
 
-swapBinary = swapNibbles(binary)
+swapBinary = swap_nibbles(binary)
 print("Swap Binary number : ", swapBinary)
 
-print("Decimal of swap binary : ", toDecimal(swapBinary))
+print("Decimal of swap binary : ", to_decimal(swapBinary))
