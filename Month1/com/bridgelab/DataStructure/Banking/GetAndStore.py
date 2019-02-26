@@ -7,6 +7,7 @@ def data_transfer_file_to_list(user_list):
     for i in f:
         temp += i
     data = temp.split("\n")
+
     for i in range(len(data) - 1):
         cust = Customer()
         cust.set_account_no(data[i].split(" ")[0])
