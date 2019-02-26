@@ -19,6 +19,7 @@ class Services:
 
     def get_data(self, account_no):
         head = self.user_list.get_head()
+        print(head.object.get_account_no)
         while head.object.get_account_no != account_no:
             head = head.next
             if head == None:
