@@ -8,7 +8,7 @@ def data_transfer_file_to_list(user_list):
         temp += i
     data = temp.split("\n")
 
-    for i in range(len(data) - 1):
+    for i in range(len(data)-1):
         cust = Customer()
         cust.set_account_no(data[i].split(" ")[0])
         cust.set_customer_name(data[i].split(" ")[1])
@@ -18,7 +18,8 @@ def data_transfer_file_to_list(user_list):
 
 def data_transfer_list_to_file(user_list):
     f = open("bank_user_data.txt", 'w')
-    for i in range(user_list.size()):
+    size = user_list.size()
+    for i in range(size):
         cust = Customer()
         cust = user_list.poll_first()
-        f.write(cust.toString() + "\n")
+        f.write(cust.to_string() + "\n")

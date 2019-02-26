@@ -6,7 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="43b45ff9-34c6-4425-939d-50e6b7e81c08" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com/bridgelab/DataStructure/Banking/Bank.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/bridgelab/DataStructure/Banking/Bank.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com/bridgelab/DataStructure/Banking/Customer.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/bridgelab/DataStructure/Banking/Customer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com/bridgelab/DataStructure/Banking/GetAndStore.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/bridgelab/DataStructure/Banking/GetAndStore.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/com/bridgelab/DataStructure/Banking/Services.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/bridgelab/DataStructure/Banking/Services.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com/bridgelab/DataStructure/Banking/UserInQueue.py" beforeDir="false" afterPath="$PROJECT_DIR$/com/bridgelab/DataStructure/Banking/UserInQueue.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/com/bridgelab/DataStructure/Banking/bank_user_data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/com/bridgelab/DataStructure/Banking/bank_user_data.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,96 +21,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/com/bridgelab/DataStructure/Banking/Services.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="21" column="40" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
-              <folding>
-                <element signature="e#0#59#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/com/bridgelab/util/LinkedList.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-              <folding>
-                <element signature="e#94#110#0" />
-                <element signature="e#428#565#0" />
-                <element signature="e#601#737#0" />
-                <element signature="e#772#1105#0" />
-                <element signature="e#1142#1451#0" />
-                <element signature="e#1481#1630#0" />
-                <element signature="e#1667#1860#0" />
-                <element signature="e#1895#2539#0" />
-                <element signature="e#2573#2753#0" />
-                <element signature="e#2787#2863#0" />
-                <element signature="e#2903#3009#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/com/bridgelab/util/Node.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/com/bridgelab/DataStructure/Banking/UserInQueue.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-              <folding>
-                <element signature="e#0#65#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/com/bridgelab/DataStructure/Banking/Bank.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="11" lean-forward="true" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+            <state relative-caret-position="170">
+              <caret line="10" column="37" lean-forward="true" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
               <folding>
-                <element signature="e#0#71#0" expanded="true" />
+                <element signature="e#0#11#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/com/bridgelab/DataStructure/Banking/Customer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/com/bridgelab/DataStructure/Banking/GetAndStore.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/com/bridgelab/DataStructure/Banking/bank_user_data.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -153,7 +76,6 @@
         <option value="$PROJECT_DIR$/com/bridgelab/DataStructure/BalancedParentheses.py" />
         <option value="$PROJECT_DIR$/com/bridgelab/util/Stack.py" />
         <option value="$PROJECT_DIR$/com/bridgelab/util/Queue.py" />
-        <option value="$PROJECT_DIR$/com/bridgelab/DataStructure/Banking/GetAndStore.py" />
         <option value="$PROJECT_DIR$/com/bridgelab/util/DeQueue.py" />
         <option value="$PROJECT_DIR$/Per.py" />
         <option value="$PROJECT_DIR$/com/bridgelab/DataStructure/PalindromeChecker.py" />
@@ -168,14 +90,15 @@
         <option value="$PROJECT_DIR$/com/bridgelab/util/Utility.py" />
         <option value="$PROJECT_DIR$/com/bridgelab/functional/LeapYear.py" />
         <option value="$PROJECT_DIR$/com/bridgelab/DataStructure/Calendar.py" />
-        <option value="$PROJECT_DIR$/com/bridgelab/util/LinkedList.py" />
         <option value="$PROJECT_DIR$/com/bridgelab/DataStructure/Banking/Casher.py" />
-        <option value="$PROJECT_DIR$/com/bridgelab/DataStructure/Banking/UserInQueue.py" />
+        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
+        <option value="$PROJECT_DIR$/com/bridgelab/util/LinkedList.py" />
         <option value="$PROJECT_DIR$/com/bridgelab/DataStructure/Banking/Customer.py" />
-        <option value="$PROJECT_DIR$/com/bridgelab/DataStructure/Banking/Bank.py" />
+        <option value="$PROJECT_DIR$/com/bridgelab/DataStructure/Banking/GetAndStore.py" />
+        <option value="$PROJECT_DIR$/com/bridgelab/DataStructure/Banking/UserInQueue.py" />
         <option value="$PROJECT_DIR$/com/bridgelab/DataStructure/Banking/bank_user_data.txt" />
         <option value="$PROJECT_DIR$/com/bridgelab/DataStructure/Banking/Services.py" />
-        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
+        <option value="$PROJECT_DIR$/com/bridgelab/DataStructure/Banking/Bank.py" />
       </list>
     </option>
   </component>
@@ -225,13 +148,6 @@
               <item name="DataStructure" type="462c0819:PsiDirectoryNode" />
               <item name="Banking" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Month1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Month1" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="bridgelab" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -243,17 +159,18 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/com/bridgelab/DataStructure" />
-      <recent name="$PROJECT_DIR$/Algorithm" />
-      <recent name="$PROJECT_DIR$/Fuctional" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/com/bridgelab/functional/" />
       <recent name="$PROJECT_DIR$/com/bridgelab/algorithm" />
       <recent name="$PROJECT_DIR$/com/bridgelab/util" />
       <recent name="$PROJECT_DIR$/com/bridgelab/functional" />
       <recent name="$PROJECT_DIR$/Algorithm/com/bridgelab/algorithm" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/com/bridgelab/DataStructure/Banking" />
+      <recent name="$PROJECT_DIR$/com/bridgelab/DataStructure" />
+      <recent name="$PROJECT_DIR$/Algorithm" />
+      <recent name="$PROJECT_DIR$/Fuctional" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -402,22 +319,38 @@
       <option name="presentableId" value="Default" />
       <updated>1550724336171</updated>
     </task>
+    <task id="LOCAL-00001" summary="bank application">
+      <created>1551155159678</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1551155159678</updated>
+    </task>
+    <task id="LOCAL-00002" summary="bank application">
+      <created>1551155318755</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1551155318755</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1366" height="686" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24571854" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32897195" />
-      <window_info anchor="bottom" x="0" y="55" width="1366" height="656" id="Run" maximized="true" order="2" visible="true" weight="0.2118492" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39856374" />
+      <window_info anchor="bottom" x="0" y="55" width="1366" height="656" id="Run" maximized="true" order="2" weight="0.33393177" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4901257" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32854578" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32675046" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32897195" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.21005386" />
@@ -444,6 +377,13 @@
           <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -771,43 +711,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/com/bridgelab/DataStructure/Banking/bank_user_data.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com/bridgelab/DataStructure/Banking/Services.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="21" column="40" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com/bridgelab/util/LinkedList.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-          <folding>
-            <element signature="e#94#110#0" />
-            <element signature="e#428#565#0" />
-            <element signature="e#601#737#0" />
-            <element signature="e#772#1105#0" />
-            <element signature="e#1142#1451#0" />
-            <element signature="e#1481#1630#0" />
-            <element signature="e#1667#1860#0" />
-            <element signature="e#1895#2539#0" />
-            <element signature="e#2573#2753#0" />
-            <element signature="e#2787#2863#0" />
-            <element signature="e#2903#3009#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/com/bridgelab/util/Node.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -815,37 +718,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/com/bridgelab/DataStructure/Banking/UserInQueue.py">
+    <entry file="file://$PROJECT_DIR$/com/bridgelab/util/LinkedList.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+        <state relative-caret-position="183">
+          <caret line="113" selection-start-line="113" selection-end-line="113" />
           <folding>
-            <element signature="e#0#65#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/com/bridgelab/DataStructure/Banking/Bank.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="11" lean-forward="true" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#71#0" expanded="true" />
+            <element signature="e#94#110#0" />
+            <element signature="e#428#565#0" />
+            <element signature="e#772#1105#0" />
+            <element signature="e#1142#1451#0" />
+            <element signature="e#1667#1860#0" />
+            <element signature="e#1895#2539#0" />
+            <element signature="e#2573#2753#0" />
+            <element signature="e#2903#3009#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/com/bridgelab/DataStructure/Banking/Customer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+        <state relative-caret-position="183">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/com/bridgelab/DataStructure/Banking/GetAndStore.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+        <state relative-caret-position="204">
+          <caret line="12" column="50" lean-forward="true" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/bridgelab/DataStructure/Banking/UserInQueue.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="15" column="76" selection-start-line="15" selection-start-column="76" selection-end-line="15" selection-end-column="76" />
+          <folding>
+            <element signature="e#0#65#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/bridgelab/DataStructure/Banking/Services.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/bridgelab/DataStructure/Banking/bank_user_data.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/com/bridgelab/DataStructure/Banking/Bank.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="37" lean-forward="true" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

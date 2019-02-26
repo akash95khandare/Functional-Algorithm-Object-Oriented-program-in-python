@@ -1,3 +1,5 @@
-1234 shubham 500.0
-1561 akash 0.0
-1891 sham 0.0
+1234 shubham 600
+1561 akash 500
+1891 sham 500
+1671 rohan 500
+8888 pawan 600

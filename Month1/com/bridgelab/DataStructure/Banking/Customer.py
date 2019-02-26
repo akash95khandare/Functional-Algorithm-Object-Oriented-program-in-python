@@ -1,6 +1,6 @@
 class Customer:
     def __init__(self):
-        self.account_no = 0.0
+        self.account_no = 0
         self.customer_name = None
         self.amount = None
         self.operation = None
@@ -29,15 +29,5 @@ class Customer:
     def set_operation(self, operation):
         self.operation = operation
 
-    def toString(self):
+    def to_string(self):
         return str(self.get_account_no()) + " " + self.get_customer_name() + " " + str(self.get_amount())
-
-
-# cust = Customer()
-# cust.set_account_no("1234")
-# cust.set_customer_name("akash")
-# cust.set_amount("500.0")
-# print(cust.toString())
-# cust1 = cust
-# cust1.set_amount(800)
-# print(cust.toString())

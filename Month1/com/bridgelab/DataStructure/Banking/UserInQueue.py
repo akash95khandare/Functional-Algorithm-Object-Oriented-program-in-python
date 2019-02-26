@@ -10,10 +10,10 @@ class UserInQueue:
         n = int(input("how many user want to stay in queue : "))
         for i in range(n):
             cust = Customer()
-            acc_no = int(input("Enter account no : "))
+            acc_no = input("Enter account no : ")
             name = input("Enter name : ")
-            amount = int(input("Enter amount"))
-            operation = int(input("Enter 1 for withdraw \n 2 for deposit \n 3 for account creation \n"))
+            amount = int(input("Enter amount : "))
+            operation = int(input("Enter \n1 for withdraw \n2 for deposit \n3 for account creation \n"))
             cust.set_amount(amount)
             cust.set_account_no(acc_no)
             cust.set_customer_name(name)

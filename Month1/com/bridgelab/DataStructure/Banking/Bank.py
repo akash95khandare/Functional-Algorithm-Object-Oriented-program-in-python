@@ -1,3 +1,4 @@
+import time
 from com.bridgelab.DataStructure.Banking.UserInQueue import UserInQueue
 from com.bridgelab.DataStructure.Banking.Services import Services
 
@@ -11,11 +12,13 @@ class Bank:
         for i in range(user_in_queue.queue.size()):
             cust = user_in_queue.queue.dequeue()
             if cust.get_operation() == 1:
-                service.withdraw(cust.get_account_no, cust.get_amount)
+                service.withdraw(cust.get_account_no(), cust.get_amount(), cust.get_customer_name())
             elif cust.get_operation() == 2:
-                service.deposit(cust.get_account_no, cust.get_amount)
+                service.deposit(cust.get_account_no(), cust.get_amount(), cust.get_customer_name())
             elif cust.get_operation() == 3:
                 service.account_created()
+            print("success")
+            time.sleep(1)
         service.write()
 
 
