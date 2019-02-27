@@ -5,3 +5,5 @@ month = int(input("Enter a month : "))
 year = int(input("Enter a year : "))
 
 print(day_of_week(day, month, year))
+
+

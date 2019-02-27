@@ -1,12 +1,9 @@
-import math
-
-
 def sqrt(c):
     t = c
-    t = (c / t + t) / 2
-    epsilon = math.e - 15
-    if abs(t - c / t) > epsilon * t:
-        print(epsilon * t)
+    epsilon = 1e-15
+    while abs(t - c / t) > epsilon:
+        t = (c / t + t) / 2
+    print("Square root of ", c, " is ", t)
 
 
 n = int(input("Enter number : "))
