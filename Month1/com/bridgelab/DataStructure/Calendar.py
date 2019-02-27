@@ -10,19 +10,9 @@ class Calendar:
         self.month_days = [3, 0, 3, 2, 3, 2, 3, 3, 2, 3, 2, 3]
 
     def display(self, arr):
-        # for i in range(7):
-        #     for j in range(7):
-        #         if i > 0 and arr[i - 1][j] == 0:
-        #             print(end="   ")
-        #             continue
-        #         elif i > 0:
-        #             print(int(arr[i - 1][j]), end="   ")
-        #             continue
-        #         print(self.week[j], end="   ")
-        #     # if i > 0:
-        #     print()
         print(self.week)
-
+        arr1 = numpy.array(arr)
+        print(arr1.reshape(6, 7))
 
     def initial(self, m, y):
         day_of_year = (y * 365 + trunc((y - 1) / 4) - trunc((y - 1) / 100) +
@@ -44,6 +34,8 @@ class Calendar:
             if temp <= month:
                 self.arr.append(temp)
                 temp += 1
+                continue
+            self.arr.append(0)
         return self.arr
 
 
