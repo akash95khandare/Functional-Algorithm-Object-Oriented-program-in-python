@@ -249,14 +249,14 @@ def show_game(arr):
 def player_call(arr):
     print("Enter position with x and y co-ordinate")
     posX, posY = int(input()), int(input())
-    while True:
-        if arr[posX][posY] == 0:
-            arr[posX][posY] = ord('X')
-            break
-        else:
-            print("This position already marked.")
-            show_game(arr)
-            player_call(arr)
+    # while True:
+    if arr[posX][posY] == 0:
+        arr[posX][posY] = ord('X')
+        # break
+    else:
+        print("This position already marked.")
+        show_game(arr)
+        player_call(arr)
 
 
 #################################################################################
