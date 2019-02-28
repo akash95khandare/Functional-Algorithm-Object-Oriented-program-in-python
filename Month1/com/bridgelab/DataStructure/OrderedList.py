@@ -7,7 +7,11 @@ class OrderedList:
         self.list = LinkedList()
 
     def orderList(self):
-        word = IO.readFromFile("abc.txt")
+        try:
+            word = IO.readFromFile("abc.txt")
+        except IOError:
+            print("File not found.")
+
         for j in word:
             self.list.sort(j)
         self.list.display()

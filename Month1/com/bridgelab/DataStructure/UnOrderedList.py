@@ -8,7 +8,11 @@ class UnOrderedList:
         self.list = LinkedList()
 
     def unorderedList(self):
-        word = IO.readFromFile("abc.txt")
+        try:
+            word = IO.readFromFile("abc.txt")
+        except IOError:
+            print("File not found.")
+
         for j in word:
             self.list.add(j)
         self.list.display()
