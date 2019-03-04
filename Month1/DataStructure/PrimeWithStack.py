@@ -10,6 +10,10 @@ class PrimeWithStack:
         self.stack = Stack()
 
     def prime_with_stack(self, rng):
+        """
+        :param rng : Take one input from user as range
+        Print prime number between 2 to range
+        """
         prime_number = Utility.get_prime_number(rng)
         anagram = Utility.get_anagram(prime_number)
         for i in anagram:

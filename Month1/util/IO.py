@@ -1,17 +1,25 @@
 def read_from_file(filename):
-    f = open(filename, 'r+')
-    j = ""
-    for i in f:
-        j = i + j
-    word = j.split(" ")
-    return word
+    try:
+        f = open(filename, 'r+')
+    except IOError:
+        print(filename, " not found.")
+    else:
+        j = ""
+        for i in f:
+            j = i + j
+        word = j.strip().split(" ")
+        return word
 
 
 def write_to_file(filename, ls):
-    f = open(filename, 'w')
-    size = ls.size()
-    for i in range(size):
-        f.write(ls.poll_first() + " ")
+    try:
+        f = open(filename, 'w')
+    except IOError:
+        print(filename, " not found.")
+    else:
+        size = ls.size()
+        for i in range(size):
+            f.write(ls.poll_first() + " ")
 
 
 def append(filename, ls):

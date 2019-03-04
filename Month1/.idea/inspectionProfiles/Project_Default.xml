@@ -22,6 +22,7 @@
         <list>
           <option value="com.bridgelab.DataStructure.Banking.Customer.Customer.customer_name" />
           <option value="com.bridgelab.DataStructure.Banking.Customer.Customer.*" />
+          <option value="DataStructure.Calendar.InvalidMonth" />
         </list>
       </option>
     </inspection_tool>

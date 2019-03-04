@@ -27,5 +27,9 @@ if __name__ == '__main__':
         Creating object of PalindromeChecker class and call its method 
     """
     p = PalindromeChecker()
-    res = p.palindromeChecker("toot")
-    print(res)
+    string = input("Enter string : ").strip()
+    res = p.palindromeChecker(string)
+    if res:
+        print("String is palindrome.")
+    else:
+        print("String is not palindrome.")

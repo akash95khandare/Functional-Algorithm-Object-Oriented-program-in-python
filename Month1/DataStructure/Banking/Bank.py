@@ -5,6 +5,10 @@ from DataStructure.Banking import Services
 
 class Bank:
     def start(self):
+        """
+            Creating object of UserInQueue class and Services class
+            call its method
+        """
         print(" Welcome in sbi ")
         user_in_queue = UserInQueue()
         service = Services()
@@ -23,5 +27,9 @@ class Bank:
 
 
 if __name__ is '__main__':
+    """
+        This is main method
+        Creating object of Bank class and call its method 
+    """
     obj = Bank()
     obj.start()

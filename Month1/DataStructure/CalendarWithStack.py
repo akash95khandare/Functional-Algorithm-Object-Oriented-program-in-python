@@ -54,6 +54,12 @@ if __name__ == '__main__':
     """
     calendar_with_stack = CalendarWithStack()
     month = int(input("Enter a month : "))
-    year = int(input("Enter a year : "))
-    calendar_with_stack.calendar_with_stack(month, year)
-    calendar_with_stack.display(month, year)
+    try:
+        if month / 10 > 1.2:
+            raise ValueError
+    except ValueError:
+        print("Month input is invalid.")
+    else:
+        year = int(input("Enter a year : "))
+        calendar_with_stack.calendar_with_stack(month, year)
+        calendar_with_stack.display(month, year)

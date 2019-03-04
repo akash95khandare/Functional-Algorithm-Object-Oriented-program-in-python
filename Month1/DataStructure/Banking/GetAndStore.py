@@ -2,11 +2,15 @@ from DataStructure.Banking import Customer
 
 
 def data_transfer_file_to_list(user_list):
+    """
+    :param user_list: Take one parameter as link list
+    read data from bank_user_data.txt file and store in linked list
+    """
     f = open("bank_user_data.txt", 'r')
     temp = ""
     for i in f:
         temp += i
-    data = temp.split("\n")
+    data = temp.strip().split("\n")
 
     for i in range(len(data)-1):
         cust = Customer()
@@ -17,6 +21,10 @@ def data_transfer_file_to_list(user_list):
 
 
 def data_transfer_list_to_file(user_list):
+    """
+    :param user_list: Take one parameter as link list
+    write data in bank_user_data.txt file from linked list
+    """
     f = open("bank_user_data.txt", 'w')
     size = user_list.size()
     for i in range(size):

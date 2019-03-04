@@ -25,16 +25,15 @@ class Calendar:
         for i in range(len(arr)):
             if i % 7 == 0:
                 print()
-            if arr[i]==0:
+            if arr[i] == 0:
                 print(end="     ")
-            elif arr[i]<10:
-                print(arr[i],end="    ")
+            elif arr[i] < 10:
+                print(arr[i], end="    ")
             else:
                 print(arr[i], end="   ")
 
     def initial(self, m, y):
         """
-
         :param m: m as month parameter for calculating month
         :param y: y as year parameter for calculating year
         :return: return array of day of month
@@ -70,6 +69,12 @@ if __name__ == "__main__":
     """
     c = Calendar()
     month = int(input("Enter a month : "))
-    year = int(input("Enter a year : "))
-    arr = c.initial(month, year)
-    c.display(arr, month, year)
+    try:
+        if month / 10 > 1.2:
+            raise ValueError
+    except ValueError:
+        print("Month input is invalid.")
+    else:
+        year = int(input("Enter a year : "))
+        arr = c.initial(month, year)
+        c.display(arr, month, year)

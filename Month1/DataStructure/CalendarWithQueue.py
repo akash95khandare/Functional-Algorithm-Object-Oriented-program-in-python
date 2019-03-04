@@ -32,7 +32,6 @@ class CalendarWithQueue:
 
     def calendar_with_queue(self, month, year):
         """
-
             :param m: m as month parameter for calculating month
             :param y: y as year parameter for calculating year
             :return: return queue of day of month
@@ -53,6 +52,12 @@ if __name__ == '__main__':
     """
     calendar_with_queue = CalendarWithQueue()
     month = int(input("Enter a month : "))
-    year = int(input("Enter a year : "))
-    calendar_with_queue.calendar_with_queue(month, year)
-    calendar_with_queue.display(month, year)
+    try:
+        if month / 10 > 1.2:
+            raise ValueError
+    except ValueError:
+        print("Month input is invalid.")
+    else:
+        year = int(input("Enter a year : "))
+        calendar_with_queue.calendar_with_queue(month, year)
+        calendar_with_queue.display(month, year)

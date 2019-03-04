@@ -51,12 +51,17 @@ class Hashing:
         self.display_hash()
         self.get_number()
         self.display_hash()
-        f = open("number.txt", 'r+')
-        f.truncate()
-        for i in range(11):
-            if self.list[i].is_empty():
-                continue
-            append("number.txt", self.list[i])
+
+        try:
+            f = open("number.txt", 'r+')
+        except IOError:
+            print("number.txt file not found.")
+        else:
+            f.truncate()
+            for i in range(11):
+                if self.list[i].is_empty():
+                    continue
+                append("number.txt", self.list[i])
 
 
 if __name__ == '__main__':
