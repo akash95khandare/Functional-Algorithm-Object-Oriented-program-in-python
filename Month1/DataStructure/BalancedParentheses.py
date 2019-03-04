@@ -31,6 +31,8 @@ if __name__ == "__main__":
     Creating object of BalancedParentheses class and call its method 
     """
     obj = BalancedParentheses()
-    string = "(5+6)∗(7+8)/(4+3)(5+6)∗(7+8)/(4+3)"
+    string = input("Enter expression : ")
+        # "(5+6)∗(7+8)/(4+3)(5+6)∗(7+8()/()4+3 11())"
+
     result = obj.balancedParentheses(string)
     print(result)

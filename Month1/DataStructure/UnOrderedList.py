@@ -1,3 +1,10 @@
+"""
+Overview
+file details
+author
+date
+
+"""
 from util import IO
 from util.LinkedList import LinkedList
 

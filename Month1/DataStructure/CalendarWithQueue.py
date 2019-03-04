@@ -51,8 +51,8 @@ if __name__ == '__main__':
         Creating object of CalendarWithQueue class and call its method 
     """
     calendar_with_queue = CalendarWithQueue()
-    month = int(input("Enter a month : "))
     try:
+        month = int(input("Enter a month : "))
         if month / 10 > 1.2:
             raise ValueError
     except ValueError:

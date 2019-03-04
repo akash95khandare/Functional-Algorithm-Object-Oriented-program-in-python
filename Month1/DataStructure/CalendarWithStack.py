@@ -53,8 +53,8 @@ if __name__ == '__main__':
         Creating object of CalendarWithStack class and call its method 
     """
     calendar_with_stack = CalendarWithStack()
-    month = int(input("Enter a month : "))
     try:
+        month = int(input("Enter a month : "))
         if month / 10 > 1.2:
             raise ValueError
     except ValueError:

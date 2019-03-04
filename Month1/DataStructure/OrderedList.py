@@ -27,13 +27,20 @@ class OrderedList:
         for j in word:
             self.list.sort(j)
         self.list.display()
-        w = input('\nEnter word :').strip()
-        if self.list.search(w):
-            self.list.remove(w)
-            print("Removed")
+        try:
+            w = input('\nEnter word :').strip()
+            if int(w)/100:
+                raise ValueError
+            # else:
+        except ValueError:
+            print("Error : You have given invalid input.")
         else:
-            self.list.sort(w)
-            print("Added")
+            if self.list.search(w):
+                self.list.remove(w)
+                print("Removed")
+            else:
+                self.list.sort(w)
+                print("Added")
         self.list.display()
         IO.write_to_file("abc.txt", self.list)
 

@@ -26,12 +26,18 @@ class Hashing:
         If found then delete that number from respective linked list
         If not found then add number in respective linked list object by calculating hash
         """
-        n = input("Enter number : ")
-        res = int(n) % 11
-        if self.list[res].search(n):
-            self.list[res].remove(n)
+        try:
+            n = int(input("Enter number : "))
+            if not n/100:
+                raise ValueError
+        except ValueError:
+            print("Error : Invalid input..")
         else:
-            self.list[res].sort(n)
+            res = n % 11
+            if self.list[res].search(str(n)):
+                self.list[res].remove(str(n))
+            else:
+                self.list[res].sort(str(n))
 
     def hashing(self):
         """
@@ -45,9 +51,10 @@ class Hashing:
         for i in range(11):
             self.list.append(LinkedList())
         number = read_from_file("number.txt")
-        for i in range(len(number) - 1):
+        for i in range(len(number)):
             res = int(number[i]) % 11
             self.list[res].sort(number[i])
+            # print(number[i])
         self.display_hash()
         self.get_number()
         self.display_hash()

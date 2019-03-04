@@ -4,7 +4,7 @@ import json
 class DataMngRPW:
     def __init__(self):
         price1 = weight1 = 0
-        with open("DataMngRPW.json") as json_file:
+        with open("Json_Files/DataMngRPW.json") as json_file:
             data = json.load(json_file)
             for i in data:
                 print(i, "-----")
