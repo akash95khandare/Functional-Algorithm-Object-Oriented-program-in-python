@@ -1,0 +1,19 @@
+[
+  {
+    "id": "1234",
+    "name": "Akash",
+    "balance": "65000",
+    "data": {
+      "Google": "60",
+      "Microsoft": "100"
+    }
+  },
+  {
+    "id": "4521",
+    "name": "Shubham",
+    "balance": "35000",
+    "data": {
+      "Google": "100"
+    }
+  }
+]
