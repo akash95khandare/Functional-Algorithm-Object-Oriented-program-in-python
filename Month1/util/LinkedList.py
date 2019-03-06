@@ -112,3 +112,16 @@ class LinkedList:
 
     def get_head(self):
         return self.head
+
+    def get_by_index(self, index):
+        tempNode = self.head
+        # try:
+        #     if self.size()<index:
+        #         raise ValueError
+        # except ValueError:
+        #     print("Index not available.")
+        #     return
+        # else:
+        for i in range(index):
+            tempNode = tempNode.next
+        return tempNode.object
