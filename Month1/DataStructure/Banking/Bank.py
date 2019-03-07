@@ -26,7 +26,7 @@ class Bank:
         service.write()
 
 
-if __name__ is '__main__':
+if __name__ == '__main__':
     """
         This is main method
         Creating object of Bank class and call its method 

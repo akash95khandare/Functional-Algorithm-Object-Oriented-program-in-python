@@ -6,6 +6,7 @@ class RegularExpression:
         self.string = string
 
     def regular_expression(self):
+
         patt = search("<+.{4}>+", self.string)
         name = input("Enter name : ")
         self.replace_string(patt.group(), name)
