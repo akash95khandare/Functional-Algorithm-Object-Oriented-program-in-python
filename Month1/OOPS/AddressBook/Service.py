@@ -36,13 +36,10 @@ class Service:
         except Exception:
             print("You have not yet open any file. ")
 
-
-
     def save_as(self):
         file_name = input("Enter file name with extension json or txt : ").strip()
         json_patt = search("\.json", file_name)
         txt_patt = search("\.txt", file_name)
-        print(json_patt)
         if json_patt is not None and json_patt.group() == ".json":
             select = 1
         elif txt_patt is not None and txt_patt.group() == ".txt":
@@ -58,80 +55,117 @@ class Service:
                 data.write(str(self.person_data))
 
     def add_person(self):
-        first_name = input("Enter first name : ").strip().upper()
-        last_name = input("Enter last name : ").strip().upper()
-        address = input("Enter address : ").strip().upper()
-        city = input("Enter city : ").strip().upper()
-        state = input("Enter state : ").strip().upper()
-        zip_code = input("Enter zip code : ").strip()
-        phone_number = input("Enter phone number : ").strip()
-        new_person = {"data": {}}
+        try:
+            first_name = input("Enter first name : ").strip().upper()
+            last_name = input("Enter last name : ").strip().upper()
+            address = input("Enter address : ").strip().upper()
+            city = input("Enter city : ").strip().upper()
+            state = input("Enter state : ").strip().upper()
+            zip_code = input("Enter zip code : ").strip()
+            phone_number = input("Enter phone number : ").strip()
+            if not first_name.isalpha() and not last_name.isalpha() and not city.isalpha() and not state.isalpha() and not phone_number.isalpha() \
+                    and not zip_code.isalpha() and not phone_number.isnumeric():
+                raise ValueError
+        except ValueError:
+            print("You have to entered your data correctly.")
+        else:
 
-        new_person["data"]["address"] = address
-        new_person["data"]["city"] = city
-        new_person["data"]["state"] = state
-        new_person["data"]["zip_code"] = zip_code
-        new_person["data"]["phone_number"] = phone_number
-        new_person["first_name"] = first_name
-        new_person["last_name"] = last_name
-        flag = True
-        for i in self.person_data:
-            if i["first_name"] == first_name and i["last_name"] == last_name:
-                print("Duplicate data.")
-                flag = False
-                break
-        if flag:
-            self.person_data.append(new_person)
-        print(self.person_data)
+            new_person = {"data": {}}
+
+            new_person["data"]["address"] = address
+            new_person["data"]["city"] = city
+            new_person["data"]["state"] = state
+            new_person["data"]["zip_code"] = zip_code
+            new_person["data"]["phone_number"] = phone_number
+            new_person["first_name"] = first_name
+            new_person["last_name"] = last_name
+            flag = True
+            for i in self.person_data:
+                if i["first_name"] == first_name and i["last_name"] == last_name:
+                    print("Duplicate data.")
+                    flag = False
+                    break
+            if flag:
+                self.person_data.append(new_person)
+            print(self.person_data)
 
     def delete_person(self):
-        first_name = input("Enter first name : ").strip().upper()
-        last_name = input("Enter last name : ").strip().upper()
-
-        for i in range(len(self.person_data)):
-            if self.person_data[i]["first_name"] == first_name and self.person_data[i]["last_name"] == last_name:
-                self.person_data.remove(self.person_data[i])
-                print("Data deleted.")
-                break
+        try:
+            first_name = input("Enter first name : ").strip().upper()
+            last_name = input("Enter last name : ").strip().upper()
+            if not first_name.isalpha() and not last_name.isalpha():
+                raise ValueError
+        except ValueError:
+            print("You have to enter name in alphabet.")
+        else:
+            for i in range(len(self.person_data)):
+                if self.person_data[i]["first_name"] == first_name and self.person_data[i]["last_name"] == last_name:
+                    self.person_data.remove(self.person_data[i])
+                    print("Data deleted.")
+                    break
 
     def edit_person(self):
         print("Enter data for editing")
-        first_name = input("Enter first name : ").strip().upper()
-        last_name = input("Enter last name : ").strip().upper()
-        flag = True
-        for i in range(len(self.person_data)):
-            if self.person_data[i]["first_name"] == first_name and self.person_data[i]["last_name"] == last_name:
-                flag = False
-                while True:
-                    choice = int(input(
-                        "\t1.First Name\n\t2.Last Name\n\t3.Addresss\n\t4.City\n\t5.State\n\t6.Zip Code\n\t7.Mobile Number\n\t8.Nothing want to change\n\tSelect choice : "))
-                    if choice == 1:
-                        first = input("Enter first name : ").strip().upper()
-                        self.person_data[i]["first_name"] = first
-                    elif choice == 2:
-                        last = input("Enter last name : ").strip().upper()
-                        self.person_data[i]["last_name"] = last
-                    elif choice == 3:
-                        addr = input("Enter address : ").strip().upper()
-                        self.person_data[i]["data"]["address"] = addr
-                    elif choice == 4:
-                        city = input("Enter city : ").strip().upper()
-                        self.person_data[i]["data"]["city"] = city
-                    elif choice == 5:
-                        state = input("Enter state : ").strip().upper()
-                        self.person_data[i]["data"]["state"] = state
-                    elif choice == 6:
-                        zip_code = input("Enter zip code : ").strip()
-                        self.person_data[i]["data"]["zip_code"] = zip_code
-                    elif choice == 7:
-                        phone_number = input("Enter phone number : ").strip()
-                        self.person_data[i]["data"]["phone_number"] = phone_number
-                    elif choice == 8:
-                        return
-                    else:
-                        print("You selected wrong choice.")
-        if flag:
-            print("Data not available.")
+        try:
+            first_name = input("Enter first name : ").strip().upper()
+            last_name = input("Enter last name : ").strip().upper()
+            if not first_name.isalpha() and not last_name.isalpha():
+                raise ValueError
+        except ValueError:
+            print("You have to enter name in alphabet.")
+        else:
+            flag = True
+            for i in range(len(self.person_data)):
+                if self.person_data[i]["first_name"] == first_name and self.person_data[i]["last_name"] == last_name:
+                    flag = False
+                    while True:
+                        choice = int(input(
+                            "\t1.First Name\n\t2.Last Name\n\t3.Addresss\n\t4.City\n\t5.State\n\t6.Zip Code\n\t7.Mobile Number\n\t8.Nothing want to change\n\tSelect choice : "))
+                        if choice == 1:
+                            first = input("Enter first name : ").strip().upper()
+                            if not first.isalpha():
+                                print("You have to enter first name in alphabet.")
+                            else:
+                                self.person_data[i]["first_name"] = first
+                        elif choice == 2:
+                            last = input("Enter last name : ").strip().upper()
+                            if not last.isalpha():
+                                print("You have to enter last name in alphabet.")
+                            else:
+                                self.person_data[i]["last_name"] = last
+                        elif choice == 3:
+                            addr = input("Enter address : ").strip().upper()
+                            self.person_data[i]["data"]["address"] = addr
+                        elif choice == 4:
+                            city = input("Enter city : ").strip().upper()
+                            if not city.isalpha():
+                                print("You have to enter city in alphabet.")
+                            else:
+                                self.person_data[i]["data"]["city"] = city
+                        elif choice == 5:
+                            state = input("Enter state : ").strip().upper()
+                            if not state.isalpha():
+                                print("You have to enter state in alphabet.")
+                            else:
+                                self.person_data[i]["data"]["state"] = state
+                        elif choice == 6:
+                            zip_code = input("Enter zip code : ").strip()
+                            if not zip_code.isnumeric() and len(zip_code) !=6:
+                                print("You have to enter zip code in numeric with 6 digit.")
+                            else:
+                                self.person_data[i]["data"]["zip_code"] = zip_code
+                        elif choice == 7:
+                            phone_number = input("Enter phone number : ").strip()
+                            if not phone_number.isnumeric() and len(phone_number) == 10:
+                                print("You have to enter phone number in numeric with 10 digit.")
+                            else:
+                                self.person_data[i]["data"]["phone_number"] = phone_number
+                        elif choice == 8:
+                            return
+                        else:
+                            print("You selected wrong choice.")
+            if flag:
+                print("Data not available.")
 
 
 if __name__ == "__main__":

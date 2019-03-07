@@ -1,0 +1,16 @@
+[
+  {
+    "id": "25",
+    "name": "Dr.Agraval",
+    "specialization": "psychatric",
+    "available_from": "10am",
+    "available_to": "6pm"
+  },
+  {
+    "id": "25",
+    "name": "Dr.Batra",
+    "specialization": "Dental",
+    "available_from": "10am",
+    "available_to": "6pm"
+  }
+]
