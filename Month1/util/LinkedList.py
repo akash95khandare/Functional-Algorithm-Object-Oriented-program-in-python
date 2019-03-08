@@ -125,3 +125,15 @@ class LinkedList:
         for i in range(index):
             tempNode = tempNode.next
         return tempNode.object
+
+    def delete_by_index(self,index):
+        temp = self.head
+        pre = temp
+        if(index==0):
+            self.head = temp.next
+        while index>0:
+            pre = temp
+            temp = temp.next
+            index-=1
+        pre.next = temp.next
+

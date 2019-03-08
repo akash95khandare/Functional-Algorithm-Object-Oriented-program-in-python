@@ -71,6 +71,60 @@ class CompanyShareWithLinkedList:
             list.append(self.company_list.poll_first())
         print(self.company_list.display())
 
+    def remove_customer(self):
+        customer_data = FileLoad.json_file_load("Customer.json")
+        for i in customer_data:
+            self.customer_list.add(i)
+        try:
+            customer_id = input("Enter customer id : ").strip()
+            customer_name = input("Enter customer name : ").strip().upper()
+            if not customer_id.isnumeric() or not customer_name.isalpha():
+                raise ValueError
+        except ValueError:
+            print("You have entered wrong data.")
+            return
+
+        for i in range(self.customer_list.size()):
+            temp = self.customer_list.get_by_index(i)
+            if temp["id"] == customer_id or str(temp["name"]) == customer_name:
+                self.customer_list.delete_by_index(i)
+                break
+
+        list = []
+        size = self.customer_list.size()
+        for i in range(size):
+            list.append(self.customer_list.poll_first())
+
+        FileLoad.json_file_write("Customer.json", list)
+
+    def remove_company(self):
+        company_data = FileLoad.json_file_load("Company.json")
+        for i in company_data:
+            self.company_list.add(i)
+        try:
+            company_name = input("Enter company name : ").strip().upper()
+            if not company_name.isalpha():
+                raise ValueError
+        except ValueError:
+            print("You have entered wrong data.")
+            return
+
+        flag = True
+        for i in range(self.company_list.size()):
+            data = self.company_list.get_by_index(i)
+            if data.get(company_name) == None:
+                self.company_list.delete_by_index(i)
+                break
+
+        list = []
+        size = self.company_list.size()
+        for i in range(size):
+            list.append(self.company_list.poll_first())
+        print(self.company_list.display())
+
+    def save(self):
+        pass
+
 
 if __name__ == "__main__":
     obj = CompanyShareWithLinkedList()

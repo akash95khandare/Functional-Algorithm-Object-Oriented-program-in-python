@@ -2,25 +2,36 @@
   {
     "id": "1234",
     "name": "AKASH",
-    "balance": "20000",
+    "balance": "25450",
     "data": {
-      "GOOGLE": "150",
-      "MICROSOFT": "100",
-      "FACEBOOK": "0"
+      "GOOGLE": "190",
+      "MICROSOFT": "105",
+      "FACEBOOK": "20",
+      "YATRA": 5
     }
   },
   {
-    "id": "4521",
+    "id": "55",
     "name": "SHUBHAM",
-    "balance": "35000",
-    "data": {
-      "GOOGLE": "100"
-    }
+    "balance": "45000",
+    "data": {}
   },
   {
-    "id": "1245",
-    "name": "ROHAN",
-    "balance": "1500",
+    "id": "44",
+    "name": "RAKESH",
+    "balance": "22000",
+    "data": {}
+  },
+  {
+    "id": "22",
+    "name": "SOMESH",
+    "balance": "45220",
+    "data": {}
+  },
+  {
+    "id": "11",
+    "name": "RAJESH",
+    "balance": "74000",
     "data": {}
   }
 ]

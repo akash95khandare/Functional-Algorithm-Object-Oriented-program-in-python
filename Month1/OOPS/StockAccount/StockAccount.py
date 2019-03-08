@@ -10,10 +10,16 @@ class StockAccount:
     def stock_account(self):
         while True:
             print(
-                "------Share Stock Account--------\n1.Add Customer\n2.Add Company\n"+
-                "3.Buy\n4.Sell\n5.Save\n6.Print Report\n7.Exit")
-            choice = int(input("Select any one : "))
-            if choice == 3 or choice == 4:
+                "------Share Stock Account--------\n1.Add Customer\n2.Add Company\n" +
+                "3.Remove Customer\n4.Remove Company\n5.Buy\n6.Sell\n7.Save\n8.Print Report\n9.Exit")
+            try:
+                choice = int(input("Select any one : "))
+                if choice <= 0 or choice > 9:
+                    raise ValueError
+            except Exception or ValueError:
+                print("You selected wrong choice.")
+                continue
+            if choice == 5 or choice == 6:
                 try:
                     customer_id = int(input("Enter customer id : "))
                     customer_name = input("Enter customer name : ").strip().upper()
@@ -24,14 +30,16 @@ class StockAccount:
                 except ValueError:
                     print("You have entered wrong data.")
                     continue
-            service = {1: "add_new_customer", 2: "add_new_company", 3: "buy", 4: "sell", 5: "save", 6: "print_report"}
-            if choice == 7:
+            service = {1: "add_new_customer", 2: "add_new_company", 3: "remove_customer", 4: "remove_company", 5: "buy",
+                       6: "sell", 7: "save", 8: "print_report"}
+            if choice == 9:
+                self.customer.save()
                 break
-            if choice == 1 or 2:
+            if choice >= 1 or choice <= 4:
                 fun = getattr(self.new_data_add, service[choice])
             else:
                 fun = getattr(self.customer, service[choice])
-            if choice == 3 or choice == 4:
+            if choice == 5 or choice == 6:
                 fun(customer_id, company_name, customer_name, no_of_share)
             else:
                 fun()

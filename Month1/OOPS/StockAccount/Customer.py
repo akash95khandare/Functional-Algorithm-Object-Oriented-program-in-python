@@ -1,4 +1,8 @@
+import datetime
+
 from OOPS.StockAccount import FileLoad
+from OOPS.StockAccount.DateTimeTransactionWithQueue import TransactionQueue
+from OOPS.StockAccount.DateTimeTransactionWithStack import TransactionStack
 
 
 class Customer:
@@ -6,6 +10,8 @@ class Customer:
         self.company_data = FileLoad.json_file_load("Company.json")
         self.customer_data = FileLoad.json_file_load("Customer.json")
         self.cus_index = 0
+        self.transaction_queue = TransactionQueue()
+        self.transaction_stack = TransactionStack()
 
     def buy(self, customer_id, company_name, customer_name, no_of_share):
         cus_index = 0
@@ -22,7 +28,7 @@ class Customer:
         com_index = 0
         flag = True
         for i in range(len(self.company_data)):
-            print(self.company_data[i]["name"], company_name)
+            # print(self.company_data[i]["name"], company_name)
             if company_name == self.company_data[i]["name"]:
                 com_index = i
                 flag = False
@@ -48,6 +54,13 @@ class Customer:
                 int(self.company_data[com_index]["data"].get("no_of_share")) - no_of_share)
             self.company_data[com_index]["data"]["balance"] = str(
                 int(self.company_data[com_index]["data"]["balance"]) + total_amount)
+
+            self.transaction_queue.transaction_queue("BUY", customer_name, company_name, str(no_of_share),
+                                                     str(total_amount),
+                                                     str(datetime.datetime.now()))
+            self.transaction_stack.transaction_stack("BUY", customer_name, company_name, str(no_of_share),
+                                                     str(total_amount),
+                                                     str(datetime.datetime.now()))
         else:
             print("company or customer don't have enough share and money.")
 
@@ -85,6 +98,12 @@ class Customer:
                 int(self.company_data[com_index]["data"].get("no_of_share")) + no_of_share)
             self.company_data[com_index]["data"]["balance"] = str(
                 int(self.company_data[com_index]["data"]["balance"]) - total_amount)
+            self.transaction_queue.transaction_queue("SELL", customer_name, company_name, str(no_of_share),
+                                                     str(total_amount),
+                                                     str(datetime.datetime.now()))
+            self.transaction_stack.transaction_stack("SELL", customer_name, company_name, str(no_of_share),
+                                                     str(total_amount),
+                                                     str(datetime.datetime.now()))
         else:
             print("company or customer don't have enough share and money.")
 
@@ -95,6 +114,8 @@ class Customer:
         FileLoad.json_file_write("Customer.json", self.customer_data)
         FileLoad.json_file_write("Company.json", self.company_data)
         Customer()
+        self.transaction_queue.save_transaction()
+        self.transaction_stack.save_transaction()
 
     def print_report(self):
         print(self.customer_data[self.cus_index])

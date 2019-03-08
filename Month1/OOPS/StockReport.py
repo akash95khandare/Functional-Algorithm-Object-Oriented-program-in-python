@@ -10,7 +10,7 @@ class StockReport:
               "no_of_share": "",
               "price": ""}
         try:
-            name = input("Enter comapany name : ").strip().upper()
+            name = input("Enter company name : ").strip().upper()
             no_of_share = input("Enter no of share : ").strip()
             price = input("Enter share price : ").strip()
             if not name.isalpha() or not no_of_share.isnumeric() or not price.isnumeric():
@@ -25,14 +25,18 @@ class StockReport:
 
     def stock_report(self):
         with open("Json_Files/Stock.json", 'r') as data:
-            data = json.load(data)
-            for i in data:
-                self.list.append(i)
+            try:
+                data = json.load(data)
+                for i in data:
+                    self.list.append(i)
+            except Exception:
+                print("File is empty.")
             dt = self.new_data()
             self.list.append(dt)
             # print(self.list)
         with open("Json_Files/Stock.json", 'w') as da:
             json.dump(self.list, da)
+            print("Company Added.")
 
 
 stock = StockReport()
