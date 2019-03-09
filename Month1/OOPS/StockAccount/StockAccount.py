@@ -1,3 +1,12 @@
+"""
+Overview : Commercial data processing
+purpose : Start the stock market application, show the menu and call services
+class name : StockAccount
+author : Akash Khandare
+date : 05/03/2019
+
+"""
+
 from OOPS.StockAccount.CompanyShareWithLinkedList import CompanyShareWithLinkedList
 from OOPS.StockAccount.Customer import Customer
 
@@ -6,8 +15,13 @@ class StockAccount:
     def __init__(self):
         self.customer = Customer()
         self.new_data_add = CompanyShareWithLinkedList()
+        self.customer.start()
 
     def stock_account(self):
+        """
+        show menu to user and call customer services
+        :return:
+        """
         while True:
             print(
                 "------Share Stock Account--------\n1.Add Customer\n2.Add Company\n" +
@@ -19,6 +33,7 @@ class StockAccount:
             except Exception or ValueError:
                 print("You selected wrong choice.")
                 continue
+
             if choice == 5 or choice == 6:
                 try:
                     customer_id = int(input("Enter customer id : "))
@@ -30,21 +45,26 @@ class StockAccount:
                 except ValueError:
                     print("You have entered wrong data.")
                     continue
+
             service = {1: "add_new_customer", 2: "add_new_company", 3: "remove_customer", 4: "remove_company", 5: "buy",
                        6: "sell", 7: "save", 8: "print_report"}
             if choice == 9:
                 self.customer.save()
-                break
-            if choice >= 1 or choice <= 4:
+                return
+
+            if choice >= 1 and choice <= 4:
                 fun = getattr(self.new_data_add, service[choice])
+                # self.customer.start()
             else:
                 fun = getattr(self.customer, service[choice])
+
             if choice == 5 or choice == 6:
                 fun(customer_id, company_name, customer_name, no_of_share)
             else:
                 fun()
 
 
+# Main method
 if __name__ == "__main__":
     stock_account = StockAccount()
     stock_account.stock_account()

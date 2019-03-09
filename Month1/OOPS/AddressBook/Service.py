@@ -1,3 +1,11 @@
+"""
+Overview : Provide different services to address book
+purpose :   Creating different services
+class name : Service
+author : Akash Khandare
+date : 07/03/2019
+"""
+
 import json
 from re import search
 
@@ -8,35 +16,47 @@ class Service:
         self.file_name = None
 
     def create(self):
+        """
+        Creating new json file
+        """
         try:
             file_name = input("Enter file name for creating new json file : ").strip()
-            if search("[a-zA-Z]", file_name) != None:
+            if search("[a-zA-Z]", file_name) is not None:
                 f = open(file_name + ".json", 'w+')
-                f.closed
+                f.close()
             else:
                 raise ValueError
         except ValueError:
             print("File name should be alphabet only")
 
     def open(self):
+        """
+        Open json file and read json data from json file
+        """
         file_name = input("Enter file name :  ").strip().lower()
         try:
             with open(file_name + ".json") as data:
                 self.person_data = json.load(data)
                 self.file_name = file_name
-                data.closed
         except Exception:
             print("File not found.")
 
     def save(self):
+        """
+        Save json data into json file
+        :return:
+        """
         try:
-            with open(self.file_name + ".json") as data:
+            with open(self.file_name + ".json", 'w') as data:
                 json.dump(self.person_data, data)
-                data.closed
+                data.close()
         except Exception:
             print("You have not yet open any file. ")
 
     def save_as(self):
+        """
+        save as the json data into json file or text file
+        """
         file_name = input("Enter file name with extension json or txt : ").strip()
         json_patt = search("\.json", file_name)
         txt_patt = search("\.txt", file_name)
@@ -55,6 +75,10 @@ class Service:
                 data.write(str(self.person_data))
 
     def add_person(self):
+        """
+        Creating new person data and then add person list
+        :return:
+        """
         try:
             first_name = input("Enter first name : ").strip().upper()
             last_name = input("Enter last name : ").strip().upper()
@@ -90,6 +114,11 @@ class Service:
             print(self.person_data)
 
     def delete_person(self):
+        """
+        Take two input from user first name and last name
+        and then delete the person data from list
+        :return:
+        """
         try:
             first_name = input("Enter first name : ").strip().upper()
             last_name = input("Enter last name : ").strip().upper()
@@ -105,6 +134,11 @@ class Service:
                     break
 
     def edit_person(self):
+        """
+        Taking two input from user and check weather is available or not
+        edit the information of person
+        :return:
+        """
         print("Enter data for editing")
         try:
             first_name = input("Enter first name : ").strip().upper()
@@ -150,7 +184,7 @@ class Service:
                                 self.person_data[i]["data"]["state"] = state
                         elif choice == 6:
                             zip_code = input("Enter zip code : ").strip()
-                            if not zip_code.isnumeric() and len(zip_code) !=6:
+                            if not zip_code.isnumeric() and len(zip_code) != 6:
                                 print("You have to enter zip code in numeric with 6 digit.")
                             else:
                                 self.person_data[i]["data"]["zip_code"] = zip_code
@@ -168,6 +202,7 @@ class Service:
                 print("Data not available.")
 
 
+# Main method
 if __name__ == "__main__":
     s = Service()
     s.open()

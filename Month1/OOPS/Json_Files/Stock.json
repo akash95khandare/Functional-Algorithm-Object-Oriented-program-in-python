@@ -58,5 +58,15 @@
     "name": "FIRE",
     "no_of_share": "5641",
     "price": "200"
+  },
+  {
+    "name": "MM",
+    "no_of_share": "20",
+    "price": "240"
+  },
+  {
+    "name": "HAWARE",
+    "no_of_share": "5420",
+    "price": "420"
   }
 ]

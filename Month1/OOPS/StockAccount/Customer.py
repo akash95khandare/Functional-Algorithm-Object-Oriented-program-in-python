@@ -1,3 +1,12 @@
+"""
+Overview : Provide different customer services to stock account
+purpose : give customer services to stock account like buy,sell,save,print report
+class name : Customer
+author : Akash Khandare
+date : 06/03/2019
+
+"""
+
 import datetime
 
 from OOPS.StockAccount import FileLoad
@@ -14,6 +23,13 @@ class Customer:
         self.transaction_stack = TransactionStack()
 
     def buy(self, customer_id, company_name, customer_name, no_of_share):
+        """
+        Update all data after calculation
+        :param customer_id: it is customer id for finding customer
+        :param company_name: it is company name for finding customer
+        :param customer_name: it is customer name
+        :param no_of_share: it is no of share
+        """
         cus_index = 0
         flag = True
         for i in range(len(self.customer_data)):
@@ -65,6 +81,13 @@ class Customer:
             print("company or customer don't have enough share and money.")
 
     def sell(self, customer_id, company_name, customer_name, no_of_share):
+        """
+        Update all data after calculation
+        :param customer_id: it is customer id for finding customer
+        :param company_name: it is company name for finding customer
+        :param customer_name: it is customer name
+        :param no_of_share: it is no of share
+        """
         cus_index = 0
         flag = True
         for i in range(len(self.customer_data)):
@@ -108,6 +131,9 @@ class Customer:
             print("company or customer don't have enough share and money.")
 
     def save(self):
+        """
+        Save all customer and company data into json file
+        """
         if self.company_data == None or self.customer_data == None:
             print("Data is not read")
             return
@@ -121,6 +147,7 @@ class Customer:
         print(self.customer_data[self.cus_index])
 
 
+# Main method
 if __name__ == "__main__":
     pass
     # obj = Customer()

@@ -1,3 +1,11 @@
+"""
+Overview : To maintain an address book.
+purpose : Show the menu list to user
+class name : AddressBook
+author : Akash Khandare
+date : 07/03/2019
+"""
+
 from OOPS.AddressBook.Service import Service
 
 
@@ -7,6 +15,7 @@ class AddressBook:
 
     def address_book(self):
         while True:
+            print("**************************************************")
             print("1.Create\n2.Open\n3.Save\n4.Save As\n5.Add Person\n6.Delete Person\n7.Edit Person\n8.Quit")
             try:
                 choice_selected = int(input("Select any choice : "))
@@ -14,8 +23,9 @@ class AddressBook:
                 print("You have enter wrong input.")
                 continue
             if choice_selected == 8:
+                self.obj.save()
                 print("Exited")
-                break
+                return
             elif choice_selected > 8:
                 print("You have selected wrong choice.")
                 continue
@@ -26,5 +36,7 @@ class AddressBook:
             fun()
 
 
-obj = AddressBook()
-obj.address_book()
+# Main method
+if __name__ == "__main__":
+    obj = AddressBook()
+    obj.address_book()

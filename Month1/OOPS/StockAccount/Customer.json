@@ -2,12 +2,13 @@
   {
     "id": "1234",
     "name": "AKASH",
-    "balance": "25450",
+    "balance": "25200",
     "data": {
-      "GOOGLE": "190",
+      "GOOGLE": "186",
       "MICROSOFT": "105",
       "FACEBOOK": "20",
-      "YATRA": 5
+      "YATRA": 5,
+      "BMC": 5
     }
   },
   {
@@ -32,6 +33,18 @@
     "id": "11",
     "name": "RAJESH",
     "balance": "74000",
+    "data": {}
+  },
+  {
+    "id": "111",
+    "name": "RAJ",
+    "balance": "12000",
+    "data": {}
+  },
+  {
+    "id": "14",
+    "name": "RAM",
+    "balance": "14500",
     "data": {}
   }
 ]

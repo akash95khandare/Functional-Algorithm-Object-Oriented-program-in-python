@@ -1,3 +1,11 @@
+"""
+Overview : Maintain the List of CompanyShares in a Linked List
+purpose : Maintain json data using linked list
+class name : CompanyShareWithLinkedList
+author : Akash Khandare
+date : 06/03/2019
+"""
+
 from OOPS.StockAccount import FileLoad
 from util.LinkedList import LinkedList
 
@@ -8,6 +16,11 @@ class CompanyShareWithLinkedList:
         self.company_list = LinkedList()
 
     def add_new_customer(self):
+        """
+        read customer data and maintain in customer linked list
+        creating new customer data and then add new json data into linked list
+        Update customer json file
+        """
         customer_data = FileLoad.json_file_load("Customer.json")
         for i in customer_data:
             self.customer_list.add(i)
@@ -40,6 +53,11 @@ class CompanyShareWithLinkedList:
         FileLoad.json_file_write("Customer.json", list)
 
     def add_new_company(self):
+        """
+        reading company data from company json file
+        creating new company json data and then add into company linked list
+        Update company json file
+        """
         company_data = FileLoad.json_file_load("Company.json")
         for i in company_data:
             self.company_list.add(i)
@@ -72,6 +90,11 @@ class CompanyShareWithLinkedList:
         print(self.company_list.display())
 
     def remove_customer(self):
+        """
+        reading customer data from json file and maintain in customer linked list
+        take customer id and customer name and then find in customer linked list
+        update customer json file after deletion
+        """
         customer_data = FileLoad.json_file_load("Customer.json")
         for i in customer_data:
             self.customer_list.add(i)
@@ -98,6 +121,12 @@ class CompanyShareWithLinkedList:
         FileLoad.json_file_write("Customer.json", list)
 
     def remove_company(self):
+        """
+        reading company data from json file and maintain in company linked list
+        take company name and then find in company linked list
+        update company json file after deletion
+        :return:
+        """
         company_data = FileLoad.json_file_load("Company.json")
         for i in company_data:
             self.company_list.add(i)
@@ -126,6 +155,7 @@ class CompanyShareWithLinkedList:
         pass
 
 
+# Main method
 if __name__ == "__main__":
     obj = CompanyShareWithLinkedList()
     obj.add_new_company()
