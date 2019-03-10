@@ -1,0 +1,50 @@
+[
+  {
+    "id": "1234",
+    "name": "AKASH",
+    "balance": "25200",
+    "data": {
+      "GOOGLE": "186",
+      "MICROSOFT": "105",
+      "FACEBOOK": "20",
+      "YATRA": 5,
+      "BMC": 5
+    }
+  },
+  {
+    "id": "55",
+    "name": "SHUBHAM",
+    "balance": "45000",
+    "data": {}
+  },
+  {
+    "id": "44",
+    "name": "RAKESH",
+    "balance": "22000",
+    "data": {}
+  },
+  {
+    "id": "22",
+    "name": "SOMESH",
+    "balance": "45220",
+    "data": {}
+  },
+  {
+    "id": "11",
+    "name": "RAJESH",
+    "balance": "74000",
+    "data": {}
+  },
+  {
+    "id": "111",
+    "name": "RAJ",
+    "balance": "12000",
+    "data": {}
+  },
+  {
+    "id": "14",
+    "name": "RAM",
+    "balance": "14500",
+    "data": {}
+  }
+]
