@@ -64,7 +64,7 @@ class Customer:
                 self.customer_data[cus_index]["data"][company_name] = str(
                     int(self.customer_data[cus_index]["data"].get(company_name)) + no_of_share)
             except Exception:
-                self.customer_data[cus_index]["data"][company_name] = no_of_share
+                self.customer_data[cus_index]["data"][company_name] = str(no_of_share)
             # print(self.company_data[company_name].get("no_of_share"))
             self.company_data[com_index]["data"]["no_of_share"] = str(
                 int(self.company_data[com_index]["data"].get("no_of_share")) - no_of_share)
