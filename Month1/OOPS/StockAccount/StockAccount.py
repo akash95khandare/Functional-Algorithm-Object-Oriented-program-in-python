@@ -15,7 +15,7 @@ class StockAccount:
     def __init__(self):
         self.customer = Customer()
         self.new_data_add = CompanyShareWithLinkedList()
-        self.customer.start()
+        # self.customer.start()
 
     def stock_account(self):
         """
@@ -38,6 +38,14 @@ class StockAccount:
                 try:
                     customer_id = int(input("Enter customer id : "))
                     customer_name = input("Enter customer name : ").strip().upper()
+                    if choice == 5:
+                        for i in self.customer.company_data:
+                            print("Company name : ", i["name"], " \t\tNo of share : ", i["data"]["no_of_share"],
+                                  "\t\tPer share price : ", i["data"]["price"])
+                    else:
+                        for i in self.customer.customer_data:
+                            if i["id"] == str(customer_id) and i["name"] == customer_name:
+                                print(i["data"])
                     company_name = input("Enter company name : ").strip().upper()
                     no_of_share = int(input("Enter number of share : "))
                     if not customer_name.isalpha() or not company_name.isalpha():
@@ -52,8 +60,9 @@ class StockAccount:
                 self.customer.save()
                 return
 
-            if choice >= 1 and choice <= 4:
+            if 1 <= choice <= 4:
                 fun = getattr(self.new_data_add, service[choice])
+                # self.__init__()
                 # self.customer.start()
             else:
                 fun = getattr(self.customer, service[choice])

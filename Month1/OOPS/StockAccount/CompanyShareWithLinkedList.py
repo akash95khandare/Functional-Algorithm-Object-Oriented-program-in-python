@@ -87,7 +87,7 @@ class CompanyShareWithLinkedList:
         size = self.company_list.size()
         for i in range(size):
             list.append(self.company_list.poll_first())
-        print(self.company_list.display())
+        # print(self.company_list.display())
 
     def remove_customer(self):
         """
@@ -149,7 +149,7 @@ class CompanyShareWithLinkedList:
         size = self.company_list.size()
         for i in range(size):
             list.append(self.company_list.poll_first())
-        print(self.company_list.display())
+        # print(self.company_list.display())
 
     def save(self):
         pass

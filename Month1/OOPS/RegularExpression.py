@@ -31,15 +31,15 @@ class RegularExpression:
             mobile_number = input("Enter mobile number : ").strip()
             date = input("Enter date : ").strip()
 
-            if not name.isalpha() and not full_name.isalpha() and not mobile_number.isnumeric():
+            if not name.isalpha() or not mobile_number.isnumeric():
                 raise ValueError
         except ValueError:
             print("You have enter wrong data.")
+            self.regular_expression()
         else:
             self.replace_string(patt1.group(), name)
             self.replace_string(patt2.group(), full_name)
             self.replace_string(patt3.group(), mobile_number)
-            print(patt4.group())
             self.replace_string(patt4.group(), date)
         print(self.string)
 

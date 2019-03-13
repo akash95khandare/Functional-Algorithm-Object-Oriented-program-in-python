@@ -1,6 +1,6 @@
 """
 Overview : To initialize deck of cards having suit and Rank, distribute 9 Cards to 4 Players
-purpose : manage 4 player
+purpose : Assign 9 card to 4 player
 class name : DeckOfCard
 author : Akash Khandare
 date : 05/03/2019
