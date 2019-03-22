@@ -30,7 +30,6 @@ public class HashingSearch {
 	}
 	
 	public static void main(String[] args) throws IOException {
-		// TODO Auto-generated method stub
 		HashingSearch h = new HashingSearch();
 		LinkedList list[] = new LinkedList[11];
 		Utility u = new Utility();
